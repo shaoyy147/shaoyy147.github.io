@@ -501,7 +501,7 @@ h5, .h5,
 h6, .h6 {
   margin-top: 1em;
   margin-bottom: 15px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",sans-serif;
   font-weight: normal;
   color: #333;
 }
@@ -513,6 +513,11 @@ p {
 code {
   background-color: #eeeeee;
   font-size: 80%;
+  font-family:Menlo,Monaco,Consolas,"Courier New","Microsoft Yahei",monospace;
+}
+
+pre, .pre {
+  font-family:Menlo,Monaco,Consolas,"Courier New","Microsoft Yahei",monospace;
 }
 
 .fa { margin-right: 0.25em; }

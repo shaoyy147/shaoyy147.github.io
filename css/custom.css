@@ -38,7 +38,7 @@ code {
   font-family:Menlo,Monaco,Consolas,"Courier New","Microsoft Yahei",monospace;
 }
 
-pre {
+pre, .pre {
   font-family:Menlo,Monaco,Consolas,"Courier New","Microsoft Yahei",monospace;
 }
 
