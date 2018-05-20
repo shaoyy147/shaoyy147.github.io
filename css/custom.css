@@ -152,6 +152,16 @@ pre, .pre {
   color: #999;
 }
 
+#blog-logo {
+  display: block;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 1px;
+  margin: 6px 10px 0 0;
+  width: 84px; height: 84px;
+  background-color: #fff;
+}
+
 /*
  * Main column and sidebar layout
  */
@@ -191,7 +201,9 @@ pre, .pre {
 .sidebar-module-list-child {
   padding-left: 25px;
 }
-
+.sidebar-toc ol {
+  list-style: none;
+}
 
 /*
  * Blog posts
