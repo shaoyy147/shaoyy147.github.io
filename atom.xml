@@ -18,8 +18,8 @@
   
   <entry>
     <title>在Windows下清除ssh-key私钥访问密码</title>
-    <link href="http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/"/>
-    <id>http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/</id>
+    <link href="http://www.yuanyangshao.com/2017/12/25/%E7%BB%8F%E9%AA%8C-2017-12-25-ClearSshkeyPassword/"/>
+    <id>http://www.yuanyangshao.com/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/</id>
     <published>2017-12-25T08:32:02.000Z</published>
     <updated>2018-05-09T07:30:58.368Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>Git学习笔记</title>
-    <link href="http://www.yuanyangshao.com/2017/10/29/gitnote/"/>
-    <id>http://www.yuanyangshao.com/2017/10/29/gitnote/</id>
+    <link href="http://www.yuanyangshao.com/2017/10/29/%E7%9F%A5%E8%AF%86-2017-10-29-gitnote/"/>
+    <id>http://www.yuanyangshao.com/2017/10/29/知识-2017-10-29-gitnote/</id>
     <published>2017-10-29T03:29:38.000Z</published>
     <updated>2018-05-21T16:16:30.533Z</updated>
     
@@ -54,7 +54,7 @@
     
     </summary>
     
-      <category term="技术" scheme="http://www.yuanyangshao.com/categories/Tech/"/>
+      <category term="知识" scheme="http://www.yuanyangshao.com/categories/Knowledge/"/>
     
     
       <category term="Git" scheme="http://www.yuanyangshao.com/tags/Git/"/>
@@ -63,8 +63,8 @@
   
   <entry>
     <title>Programming with Python for Data Science学习笔记</title>
-    <link href="http://www.yuanyangshao.com/2017/08/12/DAT210x/"/>
-    <id>http://www.yuanyangshao.com/2017/08/12/DAT210x/</id>
+    <link href="http://www.yuanyangshao.com/2017/08/12/%E7%9F%A5%E8%AF%86-2017-08-12-DAT210x/"/>
+    <id>http://www.yuanyangshao.com/2017/08/12/知识-2017-08-12-DAT210x/</id>
     <published>2017-08-12T12:45:42.000Z</published>
     <updated>2018-05-21T09:31:45.848Z</updated>
     
@@ -76,7 +76,7 @@
     
     </summary>
     
-      <category term="技术" scheme="http://www.yuanyangshao.com/categories/Tech/"/>
+      <category term="知识" scheme="http://www.yuanyangshao.com/categories/Knowledge/"/>
     
     
       <category term="Pandas" scheme="http://www.yuanyangshao.com/tags/Pandas/"/>
@@ -91,8 +91,8 @@
   
   <entry>
     <title>写在最前面的</title>
-    <link href="http://www.yuanyangshao.com/2017/08/11/the-first-page/"/>
-    <id>http://www.yuanyangshao.com/2017/08/11/the-first-page/</id>
+    <link href="http://www.yuanyangshao.com/2017/08/11/%E9%9A%8F%E6%83%B3-2017-08-11-the-first-page/"/>
+    <id>http://www.yuanyangshao.com/2017/08/11/随想-2017-08-11-the-first-page/</id>
     <published>2017-08-11T15:31:24.000Z</published>
     <updated>2018-05-09T07:22:31.173Z</updated>
     

@@ -93,10 +93,10 @@
 </div>
 
     <div class="row">
-        <div class="col-sm-8 blog-main">
-          
+      <div class="col-sm-8 blog-main">
+        
 
-<div class="page-header category-type"><h1>随想</h1></div>
+<div class="page-header category-type" id="category-type-page-header"><h1>随想</h1></div>
 
 
 
@@ -117,13 +117,13 @@
     
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/the-first-page/">写在最前面的</a>
+      <a class="archive-article-title" href="/2017/08/11/随想-2017-08-11-the-first-page/">写在最前面的</a>
     </h1>
   
 
 
     <div class="article-datetime">
-  <a href="/2017/08/11/the-first-page/" class="archive-article-date"><time datetime="2017-08-11T15:31:24.000Z" itemprop="datePublished">August 11th</time></a>
+  <a href="/2017/08/11/随想-2017-08-11-the-first-page/" class="archive-article-date"><time datetime="2017-08-11T15:31:24.000Z" itemprop="datePublished">August 11th</time></a>
 </div>
 
   </header>
@@ -137,9 +137,9 @@
 
 
 
-        </div>
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
+      </div>
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        
 
 
   <div class="sidebar-module sidebar-module-inset">
@@ -151,7 +151,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Tech/">技术</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Experience/">经验</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Thoughts/">随想</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Knowledge/">知识</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Experience/">经验</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Thoughts/">随想</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -179,19 +179,19 @@
     <ul class="sidebar-module-list">
       
         <li>
-          <a href="/2017/12/25/ClearSshkeyPassword/">在Windows下清除ssh-key私钥访问密码</a>
+          <a href="/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/">在Windows下清除ssh-key私钥访问密码</a>
         </li>
       
         <li>
-          <a href="/2017/10/29/gitnote/">Git学习笔记</a>
+          <a href="/2017/10/29/知识-2017-10-29-gitnote/">Git学习笔记</a>
         </li>
       
         <li>
-          <a href="/2017/08/12/DAT210x/">Programming with Python for Data Science学习笔记</a>
+          <a href="/2017/08/12/知识-2017-08-12-DAT210x/">Programming with Python for Data Science学习笔记</a>
         </li>
       
         <li>
-          <a href="/2017/08/11/the-first-page/">写在最前面的</a>
+          <a href="/2017/08/11/随想-2017-08-11-the-first-page/">写在最前面的</a>
         </li>
       
     </ul>
@@ -202,16 +202,22 @@
   <div class="sidebar-module">
     <h4>Links</h4>
     <ul class="sidebar-module-list">
-    
-      <li><a href="http://www.cnebr.net">中国电子商务评论网</a></li>
-    
+      
+        <li><a href="http://www.cnebr.net">中国电子商务评论网</a></li>
+      
     </ul>
   </div>
 
 
 
-        </div>
+      </div>
     </div>
+    <span id="topBtn" class="hidden-xs" data-spy="affix">
+  <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+  </a>
+</span>
+
   </div>
   <footer class="blog-footer">
   <div class="container">
@@ -260,5 +266,29 @@
 
 <script src="/js/script.js"></script>
 
-</body>
+<script>
+    // Only enable if the document has a long scroll bar
+    // Note the window height + offset
+    // if ( ($(window).height() + 100) < $(document).height() ) {
+    //     $('#top-link-block').removeClass('hidden').affix({
+    //         // how far to scroll down before link "slides" into view
+    //         offset: {top:100}
+    //     });
+    // }
+    $(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 1200) {
+            $('#topBtn').fadeIn(400);
+        }
+        else {
+            $('#topBtn').fadeOut(400);
+        }
+    });
+});
+
+</script>
+
+<!-- 下面是mathjax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

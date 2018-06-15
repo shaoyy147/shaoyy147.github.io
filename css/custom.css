@@ -355,3 +355,27 @@ pre, .pre {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
+
+.tag-type ,.tag-type h1{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.archives-type, .archives-type h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.category-type, .category-type h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+#archives-type-page-header, #tag-type-page-header, .category-type, .category-type h1{
+  border-bottom: none !important;
+}
+/* 下面是回到顶端按钮 */
+
+#topBtn.affix {
+  display:  none;
+  position: fixed; /* keeps it on the bottom once in view */
+  bottom: 80px;
+  right: 80px;
+}

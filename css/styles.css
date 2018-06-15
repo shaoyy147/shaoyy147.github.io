@@ -347,135 +347,175 @@
   text-shadow: 0 1px #be3221;
 }
 
-/** Highlight.js Styles (Syntax Highlighting) */
-
+pre,
 .highlight {
-  display: block;
-  background: white;
-  color: #333333;
-  overflow-x: auto;
-  margin-bottom: 15px;
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0;
+  font-size: 13px;
+  color: #4d4d4c;
+  background: #f7f7f7;
+  line-height: 1.6;
 }
-
-.highlight .gutter pre {
-  border: 0;
-  text-align: right;
-  padding-right: 10px;
-  background-color: transparent;
+pre,
+code {
+  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
-.highlight .code {
-  width: 100%;
+code {
+  padding: 0px 5px;
+  word-wrap: break-word;
+  color: #c7254e;
+  background: #f6f6f6;
+  border-radius: 3px;
+  border: 0.8px solid #ddd;
 }
-
+pre {
+  padding: 10px;
+}
+pre code {
+  padding: 0;
+  color: #4d4d4c;
+  background: none;
+  text-shadow: none;
+}
+.highlight {
+  border-radius: 1px;
+}
+.highlight pre {
+  border: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.highlight table {
+  margin: 0;
+  width: auto;
+  border: none;
+}
+.highlight .table-responsive{
+  margin-bottom: 0 !important;
+  border: none;
+}
+.highlight td {
+  border: none;
+  padding: 0 !important;
+  border-top: none !important;
+}
 .highlight figcaption {
-  font-size: .8em;
-  color: #999;
+  font-size: 1em;
+  color: #4d4d4c;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.highlight figcaption:before,
+.highlight figcaption:after {
+  content: " ";
+  display: table;
+}
+.highlight figcaption:after {
+  clear: both;
 }
 .highlight figcaption a {
   float: right;
+  color: #4d4d4c;
 }
-
-.highlight table {
-  margin: 0;
+.highlight figcaption a:hover {
+  border-bottom-color: #4d4d4c;
+}
+.highlight .gutter pre {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #869194;
+  text-align: right;
+  background-color: #eff2f3;
+}
+.highlight .code pre {
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f7f7f7;
 }
-
-.highlight pre {
-  margin: 0;
-  background-color: #eeeeee;
+.highlight .line {
+  height: 20px;
 }
-
-.highlight .comment,
-.highlight .meta {
-  color: #969896;
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
 }
-
-.highlight .string,
-.highlight .value,
-.highlight .variable,
-.highlight .template-variable,
-.highlight .strong,
-.highlight .emphasis,
-.highlight .quote,
-.highlight .inheritance,
-.highlight.ruby .symbol,
-.highlight.xml .cdata {
-  color: #df5000;
+.gist table {
+  width: auto;
 }
-
-.highlight .keyword,
-.highlight .selector-tag,
-.highlight .type,
-.highlight.javascript .function {
-  color: #a71d5d;
+.gist table td {
+  border: none;
 }
-
-.highlight .number,
-.highlight .preprocessor,
-.highlight .built_in,
-.highlight .params,
-.highlight .constant,
-.highlight .literal,
-.highlight .symbol,
-.highlight .bullet,
-.highlight .attribute,
-.highlight.css .hexcolor {
-  color: #0086b3;
+pre .deletion {
+  background: #fdd;
 }
-
-.highlight .section,
-.highlight .header,
-.highlight .name,
-.highlight .function,
-.highlight.python .decorator,
-.highlight.python .title,
-.highlight.ruby .function .title,
-.highlight.ruby .title .keyword,
-.highlight.perl .sub,
-.highlight.javascript .title,
-.highlight.coffeescript .title {
-  color: #63a35c;
+pre .addition {
+  background: #dfd;
 }
-
-.highlight .tag,
-.highlight .regexp {
-  color: #333333;
+pre .meta {
+  color: #8959a8;
 }
-
-.highlight .title,
-.highlight .attr,
-.highlight .selector-id,
-.highlight .selector-class,
-.highlight .selector-attr,
-.highlight .selector-pseudo,
-.highlight.ruby .constant,
-.highlight.xml .tag .title,
-.highlight.xml .pi,
-.highlight.xml .doctype,
-.highlight.html .doctype,
-.highlight.css .id,
-.highlight.css .class,
-.highlight.css .pseudo,
-.highlight .class,
-.highlight.ruby .class .title,
-.highlight.css .rules .attribute {
-  color: #795da3;
+pre .comment {
+  color: #8e908c;
 }
-
-.highlight .addition {
-  color: #55a532;
-  background-color: #eaffea;
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #c82829;
 }
-
-.highlight .deletion {
-  color: #bd2c00;
-  background-color: #ffecec;
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant,
+pre .command {
+  color: #f5871f;
 }
-
-.highlight .link {
-  text-decoration: underline;
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata,
+pre .special,
+pre .number,
+pre .formula {
+  color: #718c00;
 }
-
+pre .title,
+pre .css .hexcolor {
+  color: #3e999f;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #4271ae;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #8959a8;
+}
 /**
  * Custom Bootstrap and Theme Overrides
  *
@@ -832,4 +872,28 @@ pre, .pre {
   margin-right: 0.25em;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+.tag-type ,.tag-type h1{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.archives-type, .archives-type h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.category-type, .category-type h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+#archives-type-page-header, #tag-type-page-header, .category-type, .category-type h1{
+  border-bottom: none !important;
+}
+/* 下面是回到顶端按钮 */
+
+#topBtn.affix {
+  display:  none;
+  position: fixed; /* keeps it on the bottom once in view */
+  bottom: 80px;
+  right: 80px;
 }
