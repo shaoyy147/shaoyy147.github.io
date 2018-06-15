@@ -825,3 +825,11 @@ pre, .pre {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
+.page-header.archives-type h1:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f02d";
+  margin-right: 0.25em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
