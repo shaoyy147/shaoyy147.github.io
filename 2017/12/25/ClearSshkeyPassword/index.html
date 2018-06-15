@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Y.Shao&#39;s Blog">
 <meta property="og:description" content="之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-15T17:11:00.409Z">
+<meta property="og:updated_time" content="2018-06-15T20:13:59.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Windows下清除ssh-key私钥访问密码">
 <meta name="twitter:description" content="之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。">
@@ -134,14 +134,34 @@
       
         
           <blockquote><center><i>本文最后更新于
-          2018年06月16日
+          <u>2018年06月16日</u>
           </i>.</center></blockquote>
         
+
         <p>之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。<br><a id="more"></a></p>
 <p>首先，需要打开git-bash，（<strong>注意</strong>这里是不能使用Windows系统自带的终端或者powershell）输入命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -p</span><br><span class="line"></span><br><span class="line">Enter file in which the key is(/c/Users/YourUserName/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
 <p>命令会自动定位到默认生成的私钥，输入原始密码，在提示输入新密码时候，直接2次回车确认即可。</p>
 
+
+        
+          <div id="copyright">
+<ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者： </strong>
+      Y.Shao
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接： </strong>
+      <a href="http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/" title="在Windows下清除ssh-key私钥访问密码">http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客文章采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+    </li>
+</ul>
+</div>
+        
       
     </div>
 
@@ -151,7 +171,7 @@
     
 
     <footer class="article-footer">
-      <a data-url="http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/" data-id="cjig9qndd0003t0fyq5w9b3z5" class="article-share-link">
+      <a data-url="http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/" data-id="cjigg6v6y00067cfyyv6gra8c" class="article-share-link">
         <i class="fa fa-share"></i> Share
       </a>
       
@@ -360,6 +380,7 @@
       var path = "/" + search_path;
       searchFunc(path, 'local-search-input', 'local-search-result');
     </script>
- 
+ <script src="/js/search.js"></script>
+
 <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
