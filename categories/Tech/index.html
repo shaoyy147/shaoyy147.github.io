@@ -3,22 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在Windows下清除ssh-key私钥访问密码 | Y.Shao&#39;s Blog
+  <title>Category: 技术 | Y.Shao&#39;s Blog
     
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。">
-<meta name="keywords" content="ssh-key">
-<meta property="og:type" content="article">
-<meta property="og:title" content="在Windows下清除ssh-key私钥访问密码">
-<meta property="og:url" content="http://www.yuanyangshao.com/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Y.Shao&#39;s Blog">
+<meta property="og:url" content="http://www.yuanyangshao.com/categories/Tech/index.html">
 <meta property="og:site_name" content="Y.Shao&#39;s Blog">
-<meta property="og:description" content="之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-09T07:30:58.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Windows下清除ssh-key私钥访问密码">
-<meta name="twitter:description" content="之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。">
+<meta name="twitter:title" content="Y.Shao&#39;s Blog">
   
     <link rel="alternate" href="/atom.xml" title="Y.Shao&#39;s Blog" type="application/atom+xml">
   
@@ -99,98 +94,85 @@
 
     <div class="row">
       <div class="col-sm-8 blog-main">
-        <article id="post-经验-2017-12-25-ClearSshkeyPassword" class="article article-type-post" itemscope itemprop="blogPost">
+        
 
-  <header class="article-header">
+<div class="page-header category-type" id="category-type-page-header"><h1>技术</h1></div>
+
+
+
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
     
   
-    <h1 class="article-title" itemprop="name">
-      在Windows下清除ssh-key私钥访问密码
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/29/gitnote/">Git学习笔记</a>
     </h1>
   
 
 
-  </header>
-
-  
-  <div class="article-meta">
     <div class="article-datetime">
-  <a href="/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/" class="article-date"><time datetime="2017-12-25T08:32:02.000Z" itemprop="datePublished">2017-12-25</time></a>
+  <a href="/2017/10/29/gitnote/" class="archive-article-date"><time datetime="2017-10-29T03:29:38.000Z" itemprop="datePublished">October 29th</time></a>
 </div>
 
-    
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Experience/">经验</a>
-  </div>
-
-
-  </div>
-  
-
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <p>之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。<br><a id="more"></a></p>
-<p>首先，需要打开git-bash，（<strong>注意</strong>这里是不能使用Windows系统自带的终端或者powershell）输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -p</span><br><span class="line"></span><br><span class="line">Enter file in which the key is(/c/Users/YourUserName/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
-<p>命令会自动定位到默认生成的私钥，输入原始密码，在提示输入新密码时候，直接2次回车确认即可。</p>
-
-      
-    </div>
-
-    
-      
-
-    
-
-    <footer class="article-footer">
-      <a data-url="http://www.yuanyangshao.com/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/" data-id="cjig6pypl000fj4fy8en131q7" class="article-share-link">
-        <i class="fa fa-share"></i> Share
-      </a>
-      
-        <a href="http://www.yuanyangshao.com/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/#disqus_thread" class="article-comment-link">
-          <i class="fa fa-comment"></i> Comments
-        </a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-key/">ssh-key</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-    
-<ul id="article-nav" class="nav nav-pills nav-justified">
-  
-  <li role="presentation">
-    <a href="/2017/10/29/知识-2017-10-29-gitnote/" id="article-nav-older" class="article-nav-link-wrap">
-      <i class="fa fa-chevron-left pull-left"></i>
-      <span class="article-nav-link-title">Git学习笔记</span>
-    </a>
-  </li>
-  
-  
-</ul>
-
-
-  
+  </header>
 </article>
 
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <header class="archive-article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/12/DAT210x/">Programming with Python for Data Science学习笔记</a>
+    </h1>
+  
 
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
+
+    <div class="article-datetime">
+  <a href="/2017/08/12/DAT210x/" class="archive-article-date"><time datetime="2017-08-12T12:45:42.000Z" itemprop="datePublished">August 12th</time></a>
+</div>
+
+  </header>
+</article>
+
+  
+  
+    </div></section>
+  
+
 
 
 
       </div>
       <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
         
+
+
+
+<!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://www.yuanyangshao.com"></form> -->
+<div class="sidebar-module sidebar-toc hidden-xs">
+<div id="site_search">
+  <div class="form-group">
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+  </div>  
+ <div id="local-search-result"></div>
+ </div>
+</div>
+
 
 
   <div class="sidebar-module sidebar-module-inset">
@@ -202,7 +184,7 @@
   
   <div class="sidebar-module">
     <h4>Categories</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Knowledge/">知识</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Experience/">经验</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Thoughts/">随想</a><span class="sidebar-module-list-count">1</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Tech/">技术</a><span class="sidebar-module-list-count">2</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Experience/">经验</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/categories/Thoughts/">随想</a><span class="sidebar-module-list-count">1</span></li></ul>
   </div>
 
 
@@ -230,19 +212,19 @@
     <ul class="sidebar-module-list">
       
         <li>
-          <a href="/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/">在Windows下清除ssh-key私钥访问密码</a>
+          <a href="/2017/12/25/ClearSshkeyPassword/">在Windows下清除ssh-key私钥访问密码</a>
         </li>
       
         <li>
-          <a href="/2017/10/29/知识-2017-10-29-gitnote/">Git学习笔记</a>
+          <a href="/2017/10/29/gitnote/">Git学习笔记</a>
         </li>
       
         <li>
-          <a href="/2017/08/12/知识-2017-08-12-DAT210x/">Programming with Python for Data Science学习笔记</a>
+          <a href="/2017/08/12/DAT210x/">Programming with Python for Data Science学习笔记</a>
         </li>
       
         <li>
-          <a href="/2017/08/11/随想-2017-08-11-the-first-page/">写在最前面的</a>
+          <a href="/2017/08/11/the-first-page/">写在最前面的</a>
         </li>
       
     </ul>
@@ -293,13 +275,11 @@
 <script>
   var disqus_shortname = 'yshao';
   
-  var disqus_url = 'http://www.yuanyangshao.com/2017/12/25/经验-2017-12-25-ClearSshkeyPassword/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
@@ -343,5 +323,16 @@
 
 <!-- 下面是mathjax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+    <script type="text/javascript">      
+      var search_path = "search.xml";
+      if (search_path.length == 0) {
+          search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+ 
 <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
