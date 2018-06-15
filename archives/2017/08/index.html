@@ -165,12 +165,25 @@
 
 <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://www.yuanyangshao.com"></form> -->
 <div class="sidebar-module sidebar-toc hidden-xs">
-<div id="site_search">
+<!-- <div id="site_search">
   <div class="form-group">
   <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
   </div>  
  <div id="local-search-result"></div>
- </div>
+ </div> -->
+ <script type="text/javascript">
+  function clearSearch(x)
+  {
+    document.getElementById(x).placeholder="";
+  }
+  function reSearch(x){
+    document.getElementById(x).placeholder="Thanks for touching ^_^";
+  }
+  </script>
+ <form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank">
+  <input type="text" name="q" maxlength="30" placeholder="&#xf002;  Search" id="search-input"
+  onfocus="clearSearch(this.id)" onblur="reSearch(this.id)">
+  <input type="hidden" name="sitesearch" value="https://www.yuanyangshao.com"></form>
 </div>
 
 
@@ -323,17 +336,5 @@
 
 <!-- 下面是mathjax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
-
-    <script type="text/javascript">      
-      var search_path = "search.xml";
-      if (search_path.length == 0) {
-          search_path = "search.xml";
-      }
-      var path = "/" + search_path;
-      searchFunc(path, 'local-search-input', 'local-search-result');
-    </script>
- <script src="/js/search.js"></script>
-
 <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

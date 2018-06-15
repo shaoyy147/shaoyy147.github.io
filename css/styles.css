@@ -924,3 +924,15 @@ pre, .pre {
   text-decoration: underline;
   color: #555;
 }
+
+/* 搜索框查找 */
+#search-input{
+  border-color:#bbbbbb;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  height: 30px;
+  width: 210px;
+  text-indent: 10px;
+  font-family: FontAwesome;
+}
