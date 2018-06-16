@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.yuanyangshao.com/"/>
-  <updated>2018-06-15T20:13:59.866Z</updated>
+  <updated>2018-06-16T07:31:17.929Z</updated>
   <id>http://www.yuanyangshao.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/"/>
     <id>http://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/</id>
     <published>2017-12-25T08:32:02.000Z</published>
-    <updated>2018-06-15T20:13:59.866Z</updated>
+    <updated>2018-06-16T07:31:17.929Z</updated>
     
     <content type="html"><![CDATA[<p>之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。<br><a id="more"></a></p><p>首先，需要打开git-bash，（<strong>注意</strong>这里是不能使用Windows系统自带的终端或者powershell）输入命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -p</span><br><span class="line"></span><br><span class="line">Enter file in which the key is(/c/Users/YourUserName/.ssh/id_rsa):</span><br></pre></td></tr></table></figure><p>命令会自动定位到默认生成的私钥，输入原始密码，在提示输入新密码时候，直接2次回车确认即可。</p>]]></content>
     
