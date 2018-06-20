@@ -903,6 +903,7 @@ pre, .pre {
 #copyright{
   font-size: 13px;
   margin-top: 50px;
+  margin-bottom: 25px;
   font-family: 'Microsoft Yahei'
 }
 
@@ -924,6 +925,7 @@ pre, .pre {
 #copyright a{
   text-decoration: underline;
   color: #555;
+  word-break: break-all;
 }
 
 /* 搜索框查找 */
