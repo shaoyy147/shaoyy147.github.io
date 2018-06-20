@@ -919,7 +919,7 @@ pre, .pre {
 
 #copyright li{
   height: 24px;
-  display: inline-block;
+  display: block;
 }
 
 #copyright a{
