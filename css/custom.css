@@ -396,12 +396,11 @@ pre, .pre {
   padding-left: 20px;
   padding-top:10px;
   padding-bottom:10px;
-
 }
 
 #copyright li{
-  height: 24px;
-  display: list-item;
+  line-height: 24px;
+  display: block;
 }
 
 #copyright a{
