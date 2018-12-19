@@ -529,8 +529,12 @@ pre .javascript .function {
 /* Globals */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", source-han-serif-sc, Times, serif;
   color: #555;
+}
+strong{
+  font-weight: 900;
+  text-decoration-line: underline;
 }
 
 h1, .h1,
