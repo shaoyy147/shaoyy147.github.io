@@ -5,9 +5,9 @@
   <subtitle>谢谢你留下时光匆匆</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.yuanyangshao.com/"/>
+  <link href="https://www.yyshao.com/"/>
   <updated>2018-07-01T05:16:49.445Z</updated>
-  <id>https://www.yuanyangshao.com/</id>
+  <id>https://www.yyshao.com/</id>
   
   <author>
     <name>Y.Shao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>一个用于合并pdf的简单Python脚本</title>
-    <link href="https://www.yuanyangshao.com/2018/06/20/python-pdf-merge/"/>
-    <id>https://www.yuanyangshao.com/2018/06/20/python-pdf-merge/</id>
+    <link href="https://www.yyshao.com/2018/06/20/python-pdf-merge/"/>
+    <id>https://www.yyshao.com/2018/06/20/python-pdf-merge/</id>
     <published>2018-06-20T15:47:37.000Z</published>
     <updated>2018-07-01T05:16:49.445Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="经验" scheme="https://www.yuanyangshao.com/categories/Experience/"/>
+      <category term="经验" scheme="https://www.yyshao.com/categories/Experience/"/>
     
     
-      <category term="Python" scheme="https://www.yuanyangshao.com/tags/Python/"/>
+      <category term="Python" scheme="https://www.yyshao.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>在Windows下清除ssh-key私钥访问密码</title>
-    <link href="https://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/"/>
-    <id>https://www.yuanyangshao.com/2017/12/25/ClearSshkeyPassword/</id>
+    <link href="https://www.yyshao.com/2017/12/25/ClearSshkeyPassword/"/>
+    <id>https://www.yyshao.com/2017/12/25/ClearSshkeyPassword/</id>
     <published>2017-12-25T21:32:02.000Z</published>
     <updated>2018-06-16T04:00:00.000Z</updated>
     
@@ -53,17 +53,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.yuanyangshao.com/categories/Tech/"/>
+      <category term="技术" scheme="https://www.yyshao.com/categories/Tech/"/>
     
     
-      <category term="ssh-key" scheme="https://www.yuanyangshao.com/tags/ssh-key/"/>
+      <category term="ssh-key" scheme="https://www.yyshao.com/tags/ssh-key/"/>
     
   </entry>
   
   <entry>
     <title>Git学习笔记</title>
-    <link href="https://www.yuanyangshao.com/2017/10/29/gitnote/"/>
-    <id>https://www.yuanyangshao.com/2017/10/29/gitnote/</id>
+    <link href="https://www.yyshao.com/2017/10/29/gitnote/"/>
+    <id>https://www.yyshao.com/2017/10/29/gitnote/</id>
     <published>2017-10-29T15:29:38.000Z</published>
     <updated>2018-07-09T08:40:41.808Z</updated>
     
@@ -76,17 +76,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.yuanyangshao.com/categories/Tech/"/>
+      <category term="技术" scheme="https://www.yyshao.com/categories/Tech/"/>
     
     
-      <category term="Git" scheme="https://www.yuanyangshao.com/tags/Git/"/>
+      <category term="Git" scheme="https://www.yyshao.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Programming with Python for Data Science学习笔记</title>
-    <link href="https://www.yuanyangshao.com/2017/08/12/DAT210x/"/>
-    <id>https://www.yuanyangshao.com/2017/08/12/DAT210x/</id>
+    <link href="https://www.yyshao.com/2017/08/12/DAT210x/"/>
+    <id>https://www.yyshao.com/2017/08/12/DAT210x/</id>
     <published>2017-08-13T00:45:42.000Z</published>
     <updated>2018-07-01T05:16:36.766Z</updated>
     
@@ -98,23 +98,23 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.yuanyangshao.com/categories/Tech/"/>
+      <category term="技术" scheme="https://www.yyshao.com/categories/Tech/"/>
     
     
-      <category term="Pandas" scheme="https://www.yuanyangshao.com/tags/Pandas/"/>
+      <category term="Pandas" scheme="https://www.yyshao.com/tags/Pandas/"/>
     
-      <category term="Python" scheme="https://www.yuanyangshao.com/tags/Python/"/>
+      <category term="Python" scheme="https://www.yyshao.com/tags/Python/"/>
     
-      <category term="Data Science" scheme="https://www.yuanyangshao.com/tags/Data-Science/"/>
+      <category term="Data Science" scheme="https://www.yyshao.com/tags/Data-Science/"/>
     
-      <category term="Machine Learning" scheme="https://www.yuanyangshao.com/tags/Machine-Learning/"/>
+      <category term="Machine Learning" scheme="https://www.yyshao.com/tags/Machine-Learning/"/>
     
   </entry>
   
   <entry>
     <title>写在最前面的</title>
-    <link href="https://www.yuanyangshao.com/2017/08/11/the-first-page/"/>
-    <id>https://www.yuanyangshao.com/2017/08/11/the-first-page/</id>
+    <link href="https://www.yyshao.com/2017/08/11/the-first-page/"/>
+    <id>https://www.yyshao.com/2017/08/11/the-first-page/</id>
     <published>2017-08-12T03:31:24.000Z</published>
     <updated>2018-06-15T17:04:18.623Z</updated>
     
@@ -127,7 +127,7 @@
     
     </summary>
     
-      <category term="随想" scheme="https://www.yuanyangshao.com/categories/Thoughts/"/>
+      <category term="随想" scheme="https://www.yyshao.com/categories/Thoughts/"/>
     
     
   </entry>
