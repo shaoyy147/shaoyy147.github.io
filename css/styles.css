@@ -931,6 +931,17 @@ pre, .pre {
   word-break: break-all;
 }
 
+#copyright strong{
+  font-weight: 700;
+  text-decoration-line: none;
+}
+
+/* blackquote 字体的样式 */
+blockquote{
+  color: #999999;
+  font-style: italic;
+}
+
 /* 搜索框查找 */
 #search-input{
   border-color:#bbbbbb;
