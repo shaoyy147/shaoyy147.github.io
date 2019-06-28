@@ -531,10 +531,11 @@ pre .javascript .function {
 body {
   font-family: Georgia, "Times New Roman", source-han-serif-sc, Times, serif;
   color: #555;
+  font-weight: 200;
 }
 strong{
   font-weight: 900;
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
 }
 
 h1, .h1,
