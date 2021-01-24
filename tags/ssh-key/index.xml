@@ -13,10 +13,10 @@
     
     <item>
       <title>在Windows下清除ssh-key私钥访问密码</title>
-      <link>https://www.yyshao.com/2017/12/25/clearsshkeypassword/</link>
+      <link>https://www.yyshao.com/2017/12/25/ClearSshkeyPassword/</link>
       <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.yyshao.com/2017/12/25/clearsshkeypassword/</guid>
+      <guid>https://www.yyshao.com/2017/12/25/ClearSshkeyPassword/</guid>
       <description>&lt;p&gt;之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。&lt;/p&gt;</description>
     </item>
     
