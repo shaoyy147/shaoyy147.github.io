@@ -1,0 +1,120 @@
+/* 主框架 & 通用设置 */
+.bodycontainer{
+    /* max-width: 1150px; */
+    margin-top: 50px;
+    /* padding-right: 80px; */
+}
+
+a{
+    color: #3A6bA5;
+    text-decoration: none;
+}
+
+.main{
+    padding-right: 150px;
+}
+
+/* title - logo */
+#title-logo{
+    float: left;
+    display: block;
+    width: 84px; height: 84px;
+}
+
+#blog-title{
+    font-size: 37.5px;
+    color: #333E40;
+}
+
+#blog-subtitle{
+    font-size: 18px;
+    color: #919EB1;
+}
+
+.blog-header{
+    margin-bottom: 40px;
+}
+
+/* navibar - 导航栏 */
+.breadcrumb-item::before{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* sidebar */
+/* sidebar - 侧边栏 - 简短介绍 */
+
+#brief-intro{
+    background-color: #F7F3F3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 720px){
+    #sidebar{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+
+/* post - 文章 */
+/* post - metadata */
+.post-title{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.post-metadata{
+    color: #919EB1;
+    margin-bottom: 15px;
+}
+
+.post-metadata-time{
+    margin-right: 25px;
+}
+
+.read-more{
+    margin-top: 15px;
+    padding-right: 15px;
+    text-align: right;
+    color: #993b28;
+}
+
+.read-more>a{
+    text-decoration: underline;
+    color: #993b28;
+}
+
+.seperate-line{
+    clear: both;
+    width: 80%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.1;
+}
+
+/* single page style */
+/* for the code */
+pre{
+    max-width: 90%; 
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.hljs-ln-numbers{
+    font-size: 80%;
+    text-align: right;
+    color: #6c757d;
+}
+.hljs-ln-code{
+    padding-left: 15px !important;
+    font-size: 87.5%;
+}

@@ -1,18 +1,166 @@
-<%- partial('_partial/head') %>
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+
+<title>砖瓦匠杜重 - 谢谢你留下时光匆匆</title>
+
+
+
+
+<link rel="stylesheet" href="/highlight/tomorrow.css">
+<script src="/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initLineNumbersOnLoad();</script>
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
 <body>
-  <%- partial('_partial/masthead') %>
-  <div class="container">
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-    <div class="row">
-      <div class="col-sm-8 blog-main">
-        <%- body %>
-      </div>
-      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-        <%- partial('_partial/sidebar') %>
-      </div>
+        <div class="container-xl bodycontainer"><div class="blog-header">
+    <img src="http://example.org/avatar.jpg" alt="avatar" id="title-logo">
+    <div id="blog-title">
+        砖瓦匠杜重
     </div>
-  </div>
-  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
-  <%- partial('_partial/inline-scripts') %>
-</body>
+    <div id="blog-subtitle">
+        谢谢你留下时光匆匆
+    </div>
+</div>
+
+<div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+
+      
+      <li class="breadcrumb-item"><a href="http://example.org/">主页</a></li>
+      
+
+      
+      <li class="breadcrumb-item"><a href="http://example.org/archives/">归档</a></li>
+      
+
+      
+      <li class="breadcrumb-item"><a href="http://example.org/about/">关于</a></li>
+      
+
+      <li class="breadcrumb-item active"><a href="https://moments.yyshao.com">点滴</a></li>
+    </ol>
+</nav>
+</div></div>
+
+        <main>
+            <div class="container-xl bodycontainer">
+                <div class="row">
+                    <div class="col-md-9 col-9 main">
+                        
+<div class="post-title"> 
+    <a href="http://example.org/2019/01/12/ss-server/">简单搭建Shadowsocks服务端</a>
+</div>
+<div class="post-metadata"> 
+    <span class="post-metadata-time">2019-01-12</span><span class="post-metadata-category">技术</span>
+</div>
+<div class="post-content">
+    <p>因为国内学校VPN已无法使用（毕业半年内还能爽快使用，还心想没有人会关注这个，兴许能用很久，一跨年信息管理门户就开始清理账号了），在海外使用国内音乐服务，网易云、QQ音乐等非常不便，加之“网络回国”相关服务价格不菲，索性买个云主机（感谢阿里云的<a href="https://promotion.aliyun.com/ntms/act/campus2018.html">学生优惠</a>）搭建一套自己的回国专线。</p>
+<p>以下记录了自己搭建的过程，踩过几个不大不小的坑。</p>
+<p>{% callout info %}</p>
+<h4 id="info">Info</h4>
+<p>自己选用的云主机服务是，阿里云轻量应用服务器，预装系统镜像<strong>ubuntu 16.04</strong>
+{% endcallout %}</p>
+<h2 id="heading">安装相关工具</h2>
+<p>为了安装Shadowsocks,，我们首先需要更新Python包管理器Pip以及安装Git，在这之前我们最好更新一下ubuntu包管理器apt的软件列表。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#更新apt软件列表</span>
+sudo apt update
+
+<span style="color:#75715e">#更新Pip</span>
+apt-get upgrade python-pip
+
+<span style="color:#75715e">#安装Git</span>
+apt install git
+</code></pre></div><h2 id="shadowsocks">安装Shadowsocks</h2>
+<p>接下来安装Shadowsocks</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+</code></pre></div><h2 id="shadowsocks-1">配置Shadowsocks</h2>
+<p>接下来配置一下我们的Shadowsocks，先建立<code>/etc/shadowsocks.json</code>配置文件，然后可以参考以下配置样例</p>
+<pre><code>{
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;server_port&quot;:8388,
+    &quot;local_address&quot;: &quot;127.0.0.1&quot;,
+    &quot;local_port&quot;:1080,
+    &quot;password&quot;:&quot;your_password&quot;,
+    &quot;timeout&quot;:300,
+    &quot;method&quot;:&quot;aes-256-cfb&quot;,
+    &quot;fast_open&quot;: true
+}
+</code></pre><p><strong>需要注意以下几点</strong></p>
+<ol>
+<li><code>server</code>因为阿里云主机机制的原因，我们这里必须选择监听所有ip，即填写<code>0.0.0.0</code>。</li>
+<li><code>server_ip</code>可以随意填写，不保证与其它应用冲突即可。</li>
+<li><code>method</code>加密方式可以选择采取其它方式（这样可能会提高速度），但可能需要安装相关的依赖，这里就只采用默认的<code>aes-256-cfb</code>。</li>
+<li><code>password</code>一项自行修改。</li>
+</ol>
+<h2 id="heading-1">阿里云的相关配置</h2>
+<p>为了避免阿里云防火墙可能带来的访问问题，我们需要进行一些设置。具体方法如下。</p>
+<p>在阿里云控制台中，选择<code>安全</code>选项下的<code>防火墙</code>选项，点击<code>添加规则</code>添加<code>全部TCP+UCP</code></p>
+<p><img src="https://user-images.githubusercontent.com/25521745/51080504-f27c6200-16aa-11e9-91ab-538919a7967a.png" alt="阿里云后台设置"></p>
+<h2 id="shadowsocks-2">启动Shadowsocks</h2>
+<p>最后执行以下命令以启动Shadowsocks。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ssserver -c /etc/shadowsocks.json -d start
+</code></pre></div><p>如果无法启动，遇到以下错误</p>
+<pre><code>sudo: unable to resolve host xxxxxxxxxxx（后面需要用到这串字符）
+option --user not recognized
+</code></pre><p>解决办法如下，进入hosts文件(<code>vim /etc/hosts</code>)，添加</p>
+<pre><code>127.0.1.1  xxxxxxxxxxx(用报错给出的一串字符替换这里)
+</code></pre><p>最后在Shadowsocks客户端，填写好服务器地址、端口、密码就应该可以使用了。</p>
+</div>
+
+                    </div>
+                    <div class="col-md-3 col-12" id="sidebar">
+                        <div id="brief-intro">
+    <div class="sidebar-title">测试</div>
+    <p>我喜欢自称砖瓦匠，我不叫杜重，杜重是我的笔名。欢迎来到我的博客。这里是我对世界、对自己思考的地方。</p>
+    <p>我喜欢人与人之间的接触，在这里我想：和大家分享看法观点；总结各种经验；记录真实的自己。</p>
+    <p>我有时也耐得住孤独，在这里之外：我常有兴趣去发现、钻研、构思着什么；经营着自己丰富的内心；在追求幸福生活的道路上努力。</p>
+    <p>谢谢你有缘能来到这里，谢谢你留下时光匆匆！</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
 </html>

@@ -89,27 +89,18 @@
                     <div class="col-md-9 col-9 main">
                         
 <div class="post-title"> 
-    <a href="http://example.org/2019/06/28/beijing-metro/">北京机场线地铁信息</a>
+    <a href="http://example.org/2017/12/25/clearsshkeypassword/">在Windows下清除ssh-key私钥访问密码</a>
 </div>
 <div class="post-metadata"> 
-    <span class="post-metadata-time">2019-06-28</span><span class="post-metadata-category">经验</span>
+    <span class="post-metadata-time">2017-12-25</span><span class="post-metadata-category">技术</span>
 </div>
 <div class="post-content">
-    <p>之前搭乘北京机场线地铁，因为机场线东直门地铁入口的不明确，好多次出现了麻烦，索性把相关信息记录下来，以便日后使用。</p>
-<h3 id="heading">在东直门搭乘机场线走哪个入口？</h3>
-<p><strong>E</strong>口，位于东直门桥<strong>东北角</strong>。注意，东北角有两个入口，<strong>不要</strong>进入了B口，B口进入搭乘的是2号线内环，无法直接去向机场线。E口在B口的东侧。</p>
-<h3 id="heading-1">搭乘机场线前往首都国际机场需要多少时间？</h3>
-<p><strong>东直门</strong>出发，到达T3航站楼大约24分钟，到达T2航站楼大约34分钟。</p>
-<p><strong>三元桥</strong>出发，到达T3航站楼大约19分钟，到达T2航站楼大约29分钟。</p>
-<p>2019年5月记录，1点05分从东直门出发，1点10分到达三元桥，1点29分到达T3航站楼，停留至1点32分，1点39分到达T2航站楼。</p>
-<h3 id="heading-2">机场线的票价是多少？</h3>
-<p><strong>25</strong>元，2019年5月记录。</p>
-<h3 id="t3t2">机场线先到达T3还是T2航站楼？</h3>
-<p><strong>T3</strong>航站楼</p>
-<h3 id="heading-3">哪个朝向的座位是地铁行驶前进的方向？</h3>
-<p>在<strong>东直门</strong>搭乘前往机场，乘客进门朝<strong>右</strong>的方向即为地铁行驶前进的方向。</p>
-<p>在<strong>三元桥</strong>搭乘前往机场，乘客进入的是左侧门，因此进门朝<strong>左</strong>的方向即为地铁行驶前进的方向。</p>
-<p>在T3航站楼搭乘前往市区，乘客进门朝<strong>右</strong>的方向即为地铁行驶前进的方向。</p>
+    <p>之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。</p>
+<p>首先，需要打开git-bash，（<strong>注意</strong>这里是不能使用Windows系统自带的终端或者powershell）输入命令</p>
+<pre><code>ssh-keygen -p
+
+Enter file in which the key is(/c/Users/YourUserName/.ssh/id_rsa):
+</code></pre><p>命令会自动定位到默认生成的私钥，输入原始密码，在提示输入新密码时候，直接2次回车确认即可。</p>
 </div>
 
                     </div>
