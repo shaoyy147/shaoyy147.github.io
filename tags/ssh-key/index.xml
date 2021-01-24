@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ssh-key on My New Hugo Site</title>
-    <link>http://www.yyshao.com/tags/ssh-key/</link>
+    <link>https://www.yyshao.com/tags/ssh-key/</link>
     <description>Recent content in ssh-key on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.yyshao.com/tags/ssh-key/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.yyshao.com/tags/ssh-key/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在Windows下清除ssh-key私钥访问密码</title>
-      <link>http://www.yyshao.com/2017/12/25/clearsshkeypassword/</link>
+      <link>https://www.yyshao.com/2017/12/25/clearsshkeypassword/</link>
       <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yyshao.com/2017/12/25/clearsshkeypassword/</guid>
+      <guid>https://www.yyshao.com/2017/12/25/clearsshkeypassword/</guid>
       <description>&lt;p&gt;之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。&lt;/p&gt;</description>
     </item>
     

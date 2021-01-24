@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shadowsocks on My New Hugo Site</title>
-    <link>http://www.yyshao.com/tags/shadowsocks/</link>
+    <link>https://www.yyshao.com/tags/shadowsocks/</link>
     <description>Recent content in Shadowsocks on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.yyshao.com/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.yyshao.com/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>简单搭建Shadowsocks服务端</title>
-      <link>http://www.yyshao.com/2019/01/12/ss-server/</link>
+      <link>https://www.yyshao.com/2019/01/12/ss-server/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yyshao.com/2019/01/12/ss-server/</guid>
+      <guid>https://www.yyshao.com/2019/01/12/ss-server/</guid>
       <description>&lt;p&gt;因为国内学校VPN已无法使用（毕业半年内还能爽快使用，还心想没有人会关注这个，兴许能用很久，一跨年信息管理门户就开始清理账号了），在海外使用国内音乐服务，网易云、QQ音乐等非常不便，加之“网络回国”相关服务价格不菲，索性买个云主机（感谢阿里云的&lt;a href=&#34;https://promotion.aliyun.com/ntms/act/campus2018.html&#34;&gt;学生优惠&lt;/a&gt;）搭建一套自己的回国专线。&lt;/p&gt;</description>
     </item>
     

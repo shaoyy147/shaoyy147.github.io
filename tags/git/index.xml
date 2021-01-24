@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on My New Hugo Site</title>
-    <link>http://www.yyshao.com/tags/git/</link>
+    <link>https://www.yyshao.com/tags/git/</link>
     <description>Recent content in Git on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.yyshao.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.yyshao.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git学习笔记</title>
-      <link>http://www.yyshao.com/2017/10/29/gitnote/</link>
+      <link>https://www.yyshao.com/2017/10/29/gitnote/</link>
       <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yyshao.com/2017/10/29/gitnote/</guid>
+      <guid>https://www.yyshao.com/2017/10/29/gitnote/</guid>
       <description>&lt;p&gt;本文为本人在学习、实践Git过程中，所接触的Git命令的笔记记录，可将本文当作Git cheat sheet，为之后使用Git提供参考上的便利。&lt;/p&gt;
 &lt;p&gt;命令按照廖雪峰博客中&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&#34;&gt;Git教程&lt;/a&gt;的顺序排列。在这里，对其工作表示感谢。在各种Git中文教程中，少有能结合具体工作场景介绍Git，往往侧重点放在Git的特点功能和相对应的命令上，使得初学者难以自然地接受。而廖大大的Git教程不仅清晰介绍出Git的主要功能，更将这部分功能相对的使用情形做出阐述，使读者更能体会出Git的用途，从而更好能学习Git。在这里强烈推荐将其作为Git入门教程。&lt;/p&gt;</description>
     </item>
