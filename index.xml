@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>砖瓦匠杜重的博客</title>
     <link>https://www.yyshao.com/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on 砖瓦匠杜重的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh</language>
     <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.yyshao.com/index.xml" rel="self" type="application/rss+xml" />

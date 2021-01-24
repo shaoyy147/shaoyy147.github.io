@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on My New Hugo Site</title>
+    <title>Git on 砖瓦匠杜重的博客</title>
     <link>https://www.yyshao.com/tags/Git/</link>
-    <description>Recent content in Git on My New Hugo Site</description>
+    <description>Recent content in Git on 砖瓦匠杜重的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh</language>
     <lastBuildDate>Sun, 29 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.yyshao.com/tags/Git/index.xml" rel="self" type="application/rss+xml" />

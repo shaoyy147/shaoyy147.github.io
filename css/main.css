@@ -118,3 +118,9 @@ pre{
     padding-left: 15px !important;
     font-size: 87.5%;
 }
+
+img{
+    display: block;
+    max-width: 85%;
+    margin: auto;
+}

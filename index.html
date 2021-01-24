@@ -12,6 +12,20 @@
 <title>砖瓦匠杜重 - 谢谢你留下时光匆匆</title>
 
 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+    $(".post-content img").each(function(){
+    var ref = $(this).attr('src')
+    var wrap_structure = "<a data-fancybox='images' href='" + ref +  "'></a>"
+    $(this).wrap(wrap_structure)
+    })
+});
+</script>
+
 <body>
         <div class="container-xl bodycontainer"><div class="blog-header">
     <img src="https://www.yyshao.com/avatar.jpg" alt="avatar" id="title-logo">
