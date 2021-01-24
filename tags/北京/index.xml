@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>北京 on My New Hugo Site</title>
-    <link>http://example.org/tags/%E5%8C%97%E4%BA%AC/</link>
+    <link>https://www.yyshao.com/tags/%E5%8C%97%E4%BA%AC/</link>
     <description>Recent content in 北京 on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/%E5%8C%97%E4%BA%AC/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.yyshao.com/tags/%E5%8C%97%E4%BA%AC/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>北京机场线地铁信息</title>
-      <link>http://example.org/2019/06/28/beijing-metro/</link>
+      <link>https://www.yyshao.com/2019/06/28/beijing-metro/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/2019/06/28/beijing-metro/</guid>
+      <guid>https://www.yyshao.com/2019/06/28/beijing-metro/</guid>
       <description>&lt;p&gt;之前搭乘北京机场线地铁，因为机场线东直门地铁入口的不明确，好多次出现了麻烦，索性把相关信息记录下来，以便日后使用。&lt;/p&gt;</description>
     </item>
     
