@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+
+<title>砖瓦匠杜重 - 谢谢你留下时光匆匆</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+    $(".post-content img").each(function(){
+    var ref = $(this).attr('src')
+    var wrap_structure = "<a data-fancybox='images' href='" + ref +  "'></a>"
+    $(this).wrap(wrap_structure)
+    })
+});
+</script>
+
+
+
+<link rel="stylesheet" href="/highlight/tomorrow.css">
+<script src="/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initLineNumbersOnLoad();</script>
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+<body>
+        <div class="container-md bodycontainer"><div class="d-flex justify-content-lg-start justify-content-center">
+    <div class="blog-header">
+        <img class="d-none d-sm-block" src="https://www.yyshao.com/avatar.jpg" alt="avatar" id="title-logo">
+        <div>
+            <div id="blog-title">
+                砖瓦匠杜重
+            </div>
+            <div id="blog-subtitle">
+                谢谢你留下时光匆匆
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+<nav aria-label="breadcrumb" class="navbar d-flex justify-content-lg-start justify-content-center">
+    <ol class="breadcrumb">
+
+      
+      <li class="breadcrumb-item"><a href="https://www.yyshao.com/">主页</a></li>
+      
+
+      
+      <li class="breadcrumb-item"><a href="https://www.yyshao.com/archives/">归档</a></li>
+      
+
+      
+      <li class="breadcrumb-item"><a href="https://www.yyshao.com/about/">关于</a></li>
+      
+
+      <li class="breadcrumb-item active"><a href="https://moments.yyshao.com">点滴</a></li>
+    </ol>
+</nav>
+</div></div>
+
+        <main>
+            <div class="container-md bodycontainer">
+                <div class="row">
+                    <div class="col-lg-9 col-12 main">
+                        
+<div class="post-title"> 
+    <a href="https://www.yyshao.com/2017/08/12/DAT210x/">Programming with Python for Data Science学习笔记</a>
+</div>
+<div class="post-metadata"> 
+    <span class="post-metadata-time">2017-08-12</span><span class="post-metadata-category">技术</span>
+</div>
+<div class="post-content">
+    <p>本文写于本人在<a href="https://www.edx.org/">EdX</a>平台上学习<a href="https://www.edx.org/course/programming-python-data-science-microsoft-dat210x-5">Programming with Python for Data Science</a>课程过程中。该课程主要讲述如何利用Python进行数据科学实践，内容涵盖Pandas、Sciki-learn等数据科学中常用包的主要命令，并结合实际数据集进行实战操作。在学习过程中，我将课程中学习到、代码作业中所遇到的命令在此进行归纳总结，以方便后面学习者查阅。另外该门课程中所用到命令也常在实际操作中用到，亦可将本文作为数据科学工作中的参考资料。</p>
+<p>本文按照课程学习顺序对命令进行排序。另外命令方法的参数并未列全，只列出常用参数，更多参数功能可参见官方文档。</p>
+<p>另外，我将课程Lab上机作业的代码放在我Github上托管<a href="https://github.com/shaoyy147/DAT210x-python_datascience">DAT210</a>，若有需要，可供参考。</p>
+<h2 id="heading">数据预处理</h2>
+<h3 id="heading-1">数据读入</h3>
+<h3 id="csvpdread-csv">读入csv等文本文件<code>pd.read_csv()</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">FilePath</span><span style="color:#e6db74">&#39;</span>, header <span style="color:#f92672">=</span> None, names <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ColunName_1</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ColunName_N</span><span style="color:#e6db74">&#39;</span> ], sep <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">,</span><span style="color:#e6db74">&#39;</span>, index_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, na_values <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">?</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div><p>读入数据文件，转换为<code>Dataframe</code>格式，赋予<code>df</code>名称。位置参数<code>'FilePath'</code>指定数据文件路径；关键字参数<code>header</code>指定文件中，数据Feature的名称所在的行数，<code>None</code>表示数据文件中没有包含Feature的名称；参数<code>names</code>手动赋予Feature的名称；参数<code>sep</code>指定数据文件中的分隔符；参数<code>index_col</code>指定样本标签（唯一确定某条样本信息）所在的列数。</p>
+<h4 id="htmlpdread-html">读入html网页中的表格<code>pd.read_html()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_html(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">URL</span><span style="color:#e6db74">&#39;</span>)[<span style="color:#ae81ff">0</span>]
+</code></pre></div><p>从网页中读入<strong>一系列</strong>表格，转换为<code>Dataframe</code>的<code>List</code>，取其中元素赋予<code>df</code>名称。位置参数<code>'URL'</code>指定读入网页的网址，<strong>注意</strong>可能需将<em>https</em>改为<em>http</em>，以匹配符合的协议。</p>
+<h4 id="heading-2">读入图像文件</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> misc
+
+sample <span style="color:#f92672">=</span> []
+img <span style="color:#f92672">=</span> misc<span style="color:#f92672">.</span>read(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">FilePath</span><span style="color:#e6db74">&#39;</span>)    <span style="color:#75715e">#读取文件</span>
+sample<span style="color:#f92672">.</span>append((img <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>)<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))      <span style="color:#75715e">#将文件转换至一维数组</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(sample)          <span style="color:#75715e">#转化为Dataframe格式</span>
+</code></pre></div><h3 id="dataframe">Dataframe数据集概览操作</h3>
+<h4 id="dfheaddftail">浏览具体数据<code>df.head()</code>与<code>df.tail()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>head(Num)
+df<span style="color:#f92672">.</span>tail(Num)
+</code></pre></div><p>返回<code>df</code>中前/后几行数据具体情况。位置参数<code>Num</code>指定行数。</p>
+<h4 id="dfdescribe">数值特征的统计量<code>df.describe()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>describe()
+</code></pre></div><p>返回<code>df</code>中数值特征的相关统计量，包括样本量、最大（小）值、平均值、标准差、四分位数。在统一Feature Scaling 前可以用此命令观察数据的特点。</p>
+<h4 id="dfcolumnsdfdtypes">浏览数据集中的特征<code>df.columns</code>与<code>df.dtypes</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>colunms
+df<span style="color:#f92672">.</span>dtypes
+</code></pre></div><p><code>df,columns</code>返回<code>df</code>中特征的名称,<code>df.dtypes</code>返回<code>df</code>中特征的名称以及对应储存数据的类型。在导入数据过程中，可能因为各种原因所期望的数据类型与实际数据类型不同，会影响后面命令的执行，这时需要对进行数据类型转换。<strong>注意</strong>上述命令是<code>df</code>的属性，而非<code>df</code>的方法，即命令后无<code>()</code>。</p>
+<h4 id="featuredffeatureunique">Feature的所有取值<code>df.feature.unique()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>feature_name<span style="color:#f92672">.</span>unique()
+</code></pre></div><p>返回数据集<code>df</code>的<code>feature_name</code>属性的所有取值。</p>
+<h4 id="heading-3">数据集切片</h4>
+<h5 id="heading-4">常规切片</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#选取某些纵列，即选取全部样本的某些Feature</span>
+<span style="color:#75715e">#以下命令返回Series对象,假设选取Feature名为&#39;recency&#39;的第0纵列，</span>
+df<span style="color:#f92672">.</span>recency
+df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">recency</span><span style="color:#e6db74">&#39;</span>]
+df<span style="color:#f92672">.</span>loc[:,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">recency</span><span style="color:#e6db74">&#39;</span>]
+df<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">0</span>]
+df<span style="color:#f92672">.</span>ix[:,<span style="color:#ae81ff">0</span>]
+
+<span style="color:#75715e">#以下命令返回Dataframe对象</span>
+df<span style="color:#f92672">.</span>[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">recency</span><span style="color:#e6db74">&#39;</span>]]
+df<span style="color:#f92672">.</span>loc[:,[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">recency</span><span style="color:#e6db74">&#39;</span>]]
+df<span style="color:#f92672">.</span>iloc[:,[<span style="color:#ae81ff">0</span>]]
+
+<span style="color:#75715e">#选取某些行，即选取某些样本的全部Feature</span>
+df[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>]
+df<span style="color:#f92672">.</span>loc[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>,:]
+</code></pre></div><h5 id="heading-5">条件选取切片</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[(df<span style="color:#f92672">.</span>recency <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">7</span>) <span style="color:#f92672">&amp;</span> (df<span style="color:#f92672">.</span>newbie <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)]
+</code></pre></div><p>返回<code>df</code>数据集中<code>'recency'</code>属性小于7且<code>'newbie'</code>属性等于0的样本</p>
+<h3 id="heading-6">数据集整理</h3>
+<h4 id="feature">数据集Feature名称修改</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>columns <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Feature_1</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Feature_2</span><span style="color:#e6db74">&#39;</span>]
+</code></pre></div><h4 id="feature-1">有序分类Feature转换</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#下面以satisfaction属性为例</span>
+ordered_satisfaction <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Very Unhappy</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Unhappy</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Neutral</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Happy</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Very Happy</span><span style="color:#e6db74">&#39;</span>]
+df<span style="color:#f92672">.</span>satisfaction <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>satisfaction<span style="color:#f92672">.</span>astype(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">category</span><span style="color:#e6db74">&#34;</span>,
+                                         ordered<span style="color:#f92672">=</span>True,categories<span style="color:#f92672">=</span>ordered_satisfaction)<span style="color:#f92672">.</span>cat<span style="color:#f92672">.</span>codes
+</code></pre></div><p>将<code>df</code>数据集中分类Feature<code>satisfaction</code>从文本属性转换为整数表示，1对应<code>'Very Unhappy'</code>，5对应<code>'Very Happy'</code>，-1表示无对应。<code>astype(&quot;category&quot;, ordered = True, categories = ordered_satisfaction)</code>方法将<code>Series</code>按照<code>categories</code>参数转换为有序的<code>category</code>类型，<code>cat.codes</code>为<code>category</code>类型所对应的数字编码。</p>
+<h4 id="featurepdget-dummies">无序分类Feature转换<code>pd.get_dummies()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>get_dummies(df,columns<span style="color:#f92672">=</span>[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">column_1</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">column_2</span><span style="color:#e6db74">&#39;</span>])
+</code></pre></div><p>将数据集<code>df</code>中无序分类Feature<code>column_1</code>和<code>column_2</code>转换为dummy表示(0/1表示)。位置参数<code>df</code>指定待操作的数据集；关键字参数<code>columns</code>指定待操作的Feature。</p>
+<h4 id="nandffillnadffeaturefillna">缺省Nan值替换<code>df.fillna()</code>与<code>df.feature.fillna()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#df.fillna()与df.feature.fillna()参数相同，下例只说明前者</span>
+df<span style="color:#f92672">.</span>fillna(<span style="color:#ae81ff">0</span>)
+df<span style="color:#f92672">.</span>fillna(method <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ffill</span><span style="color:#e6db74">&#39;</span>, limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>)
+</code></pre></div><p>第一行命令将数据集<code>df</code>中的所检索到的Nan值用0替换掉。第二行命令将数据集<code>df</code>中所检索到的Nan值用前一条样本的对应值替代，关键字参数<code>method</code>指定替代的方法，<code>limit</code>指定替换的最大间隔（在连续多个数据都为Nan时用到），具体方法参见<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.fillna.html">官方文档</a>。</p>
+<h4 id="dfdropdfdropna">数据剔除<code>df.drop()</code>与<code>df.dropna()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>dropna(axis <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, thresh <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>)
+df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop(labels<span style="color:#f92672">=</span>[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">column_1</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">column_2</span><span style="color:#e6db74">&#39;</span>],axis <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+</code></pre></div><p>第一行命令将<code>df</code>数据集中有5项及其以上属性为Nan的数据剔除，关键字参数<code>axis</code>指定剔除数据集的行（样本）或列（属性），0表示剔除行，1表示剔除列，<code>thresh</code>指定当出现多少Nan值时剔除该项。第二行命令剔除<code>df</code>数据集中<code>'column_1'</code>和<code>'column_2'</code>属性，关键字参数<code>label</code>指定所剔除的项,<code>axis</code>指定剔除数据集的行（样本）或列（属性），0表示剔除行，1表示剔除列。</p>
+<h4 id="pdto-numeric">数据类型转化<code>pd.to_numeric()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>Num <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df<span style="color:#f92672">.</span>Num, errors <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">coerce</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div><p>将数据集<code>df</code>中<code>Num</code>属性下数据转换为相应的数值类型。位置参数指定所有转化的<code>Series</code>，关键字参数<code>errors</code>指定处理错误的方式，<code>'coerce'</code>将无法转化的值转化为Nan。在读取数据时，需要特别注意，往往所期望的数据类型与实际的数据类型不一致，这会导致数据处理上的错误，这要求需要对处理数据前，检查数据类型，并转化为所期望的数据类型。</p>
+<h4 id="reset-index">数据编号重排<code>reset_index()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>reset_index(drop <span style="color:#f92672">=</span> True, inplace <span style="color:#f92672">=</span> True)
+</code></pre></div><p>将数据集<code>df</code>的编号重新编排。关键字参数<code>drop</code>指定是否保留原有的编号，参数<code>inplace</code>指定是否在原有数据集上操作，或返回一个新的数据集。当对样本进行剔除后，数据集样本编号不会随之变动，利用<code>reset_index()</code>方法对数据集编号进行重新编排。</p>
+<h4 id="feature-scaling">数据特征缩放Feature Scaling</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> Normalizer
+
+norm <span style="color:#f92672">=</span> Normalizer()
+norm<span style="color:#f92672">.</span>fit(df)
+df <span style="color:#f92672">=</span> norm<span style="color:#f92672">.</span>transform(df)
+</code></pre></div><p>Normalize数据特征，使得数据在同一Scale下，在K近邻算法，PCA主成分降维算法等中常用到。除<code>Normalizer</code>方法外，常用特征放缩方法还有<code>MinMaxScaler</code>,<code>RobustScaler</code>,<code>StandardScaler</code>。</p>
+<h4 id="train-test-split">数据训练集与测试集分离<code>train_test_split()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+
+data_train, data_test, label_train, label_test <span style="color:#f92672">=</span> train_test_split(data, labels,
+                                                                  test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+</code></pre></div><p>将训练样本<code>data</code>与其对应标签<code>labels</code>随机分成训练集、测试集。关键字参数<code>test_size</code>指定测试集占总样本的比例。</p>
+<h2 id="heading-7">数据可视化</h2>
+<h3 id="heading-8">基础图像绘制</h3>
+<h4 id="histogramsdfplothist">条形图Histograms<code>df.plot.hist()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib
+matplotlib<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>use(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ggplot</span><span style="color:#e6db74">&#39;</span>) <span style="color:#75715e">#制定图像绘制风格</span>
+
+df<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>hist(alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>)
+</code></pre></div><p>绘制数据集<code>df</code>上条形图，关键字参数<code>alpha</code>制定柱形的透明程度，0表示完全透明，1表示完全不透明。</p>
+<h4 id="2d-scatterdfplotscatter">二维散点图2D-Scatter<code>df.plot.scatter()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib
+
+df<span style="color:#f92672">.</span>plot<span style="color:#f92672">.</span>scatter(x <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">feature_1</span><span style="color:#e6db74">&#39;</span>, y <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">feature_2</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div><p>绘制数据集<code>df</code>上关于属性<code>'feature_1'</code>和<code>'feature_2'</code>的散点图，关键字参数<code>x</code>和<code>y</code>指定需要作出散点图的两个数据集的Feature。</p>
+<h4 id="3d-scatterdfplotscatter">三维散点图3D-Scatter<code>df.plot.scatter()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> mpl_tookits.mplot3d <span style="color:#f92672">import</span> Axes3D
+
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()      <span style="color:#75715e">#生成figure类的实例fig</span>
+ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>, projection <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">3d</span><span style="color:#e6db74">&#39;</span>)   <span style="color:#75715e">#在fig上添加图，设置为3d坐标图</span>
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">xlabel</span><span style="color:#e6db74">&#39;</span>)    <span style="color:#75715e">#设置xyz坐标轴的名称</span>
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">ylabel</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set_zlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">zlabel</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>scatter(df<span style="color:#f92672">.</span>feature_1, df<span style="color:#f92672">.</span>feature_2, df<span style="color:#f92672">.</span>feature_3, c<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;</span>, marker <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">.</span><span style="color:#e6db74">&#39;</span>)  
+<span style="color:#75715e">#绘制三维图，关键字参数c制定散点的颜色，参数marker制定散点图案类型</span>
+plt<span style="color:#f92672">.</span>show()   <span style="color:#75715e">#显示绘制图像</span>
+</code></pre></div><p>绘制关于数据集<code>df</code>的三个属性<code>feature_1``feature_2``feature_3</code>的三维散点图。<strong>注意</strong><code>Pandas</code>并未自带的绘制三维散点图的方法。</p>
+<h3 id="heading-9">高维数据图像绘制</h3>
+<h4 id="parallel-coordinate-parallel-coordinates">Parallel Coordinate <code>parallel_coordinates()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>figure()
+parallel_coordinates(df, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cat_names</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>绘制数据集<code>df</code>的Parallel Coordinate图像，位置参数<code>df</code>制定绘制的数据集，参数<code>cat_names</code>指定分类所依据的Feature。<strong>注意</strong>Matplotlib包的parallel_coordinates所绘制的所有纵坐标量级尺度都是一样，无法不同Feature不同处理。</p>
+<h4 id="andrews-curves-andrews-curves">Andrew's Curves <code>andrews_curves()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pandas.tools.plotting <span style="color:#f92672">import</span> andrews_curves
+
+plt<span style="color:#f92672">.</span>figure()
+andrews_curves(df, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">cat_names</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>绘制数据集<code>df</code>的Andrew's Curves图像，位置参数<code>df</code>制定绘制的数据集，参数<code>cat_names</code>指定分类所依据的Feature。</p>
+<h4 id="imshow-pltimshow">Imshow <code>plt.imshow()</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#绘制图像</span>
+plt<span style="color:#f92672">.</span>imshow(df<span style="color:#f92672">.</span>corr(), cmap<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>cm<span style="color:#f92672">.</span>Blues, interpolation<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">nearest</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#75715e">#以下设置坐标名称</span>
+tick_marks <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(df<span style="color:#f92672">.</span>columns))]
+plt<span style="color:#f92672">.</span>xticks(tick_marks, df<span style="color:#f92672">.</span>columns, rotation<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">vertical</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>yticks(tick_marks, df<span style="color:#f92672">.</span>columns)
+<span style="color:#75715e">#显示图像</span>
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p>绘制数据集<code>df</code>相关矩阵的Imshow图像。Imshow图像可用于找出相关程度较高的一组Feature。</p>
+<h2 id="heading-10">数据转换</h2>
+<h3 id="pca">主成分分析PCA</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.decomposition <span style="color:#f92672">import</span> PCA
+
+pca <span style="color:#f92672">=</span> PCA(n_components <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, svd_solver <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">full</span><span style="color:#e6db74">&#39;</span>)
+pca<span style="color:#f92672">.</span>fit(df)
+T <span style="color:#f92672">=</span> pca<span style="color:#f92672">.</span>transform(df)
+</code></pre></div><p>根据设置，利用数据集<code>df</code>训练模型，并将训练后的模型应用于数据集<code>df</code>上，返回的结果储存于<code>T</code>。<code>PCA()</code>生成PCA类实例，参数<code>n_component</code>指定最后主成分个数，<code>svd_solver</code>指定模型运算算法。<code>fit()</code>方法将<code>df</code>数据集应用于模型上。<code>transform()</code>方法将<code>df</code>按照训练后的模型转化为新的数据集。</p>
+<h3 id="isomap">流形降维Isomap</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> manifold
+
+iso <span style="color:#f92672">=</span> manifold<span style="color:#f92672">.</span>Isomap(n_neighbors <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, n_components <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)
+iso<span style="color:#f92672">.</span>fit(df)
+T <span style="color:#f92672">=</span> iso<span style="color:#f92672">.</span>transform(df)
+</code></pre></div><p>根据参数设置，利用数据集<code>df</code>训练模型，并将训练后的模型应用于数据集<code>df</code>上，返回的结果储存于<code>T</code>。<code>Isomap()</code>生成Isomap类实例，参数<code>n_neighbors</code>指定邻域节点数，参数<code>n_component</code>指定最后主成分个数。<code>fit()</code>方法将<code>df</code>数据集应用于模型上。<code>transform()</code>方法将<code>df</code>按照训练后的模型转化为新的数据集。</p>
+<h2 id="heading-11">机器学习算法</h2>
+<h3 id="k-means">聚类K-Means</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.cluster <span style="color:#f92672">import</span> KMeans
+
+kmeans <span style="color:#f92672">=</span> KMeans(n_clusters <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, n_init <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>)
+kmeans<span style="color:#f92672">.</span>fit(df)
+kmeans<span style="color:#f92672">.</span>cluster_centers_
+</code></pre></div><p>根据参数设置，利用数据集<code>df</code>训练模型，并将训练后的模型应用于数据集<code>df</code>上，返回的结果储存于<code>T</code>。<code>KMeans()</code>生成KMeans类实例，参数<code>n_clusters</code>指定分类数，参数<code>n_init</code>指定算法重复执行次数。<code>fit()</code>方法将<code>df</code>数据集应用于模型上。属性<code>cluster_centers_</code>返回训练后模型的各类中心点坐标。</p>
+<h3 id="kk-nearest-neighbors">K近邻K-Nearest Neighbors</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsClassifier
+
+model <span style="color:#f92672">=</span> KNeighborsClassifier(n_neighbors<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, weights <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">uniform</span><span style="color:#e6db74">&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train, y_train) 
+model<span style="color:#f92672">.</span>score(X_test, y_test)
+</code></pre></div><p>根据参数设置，利用数据集<code>X_train</code>与其对应标签<code>y_train</code>训练模型。<code>KNeighborsClassifier()</code>生成KNeighborsClassifier类实例，参数<code>n_neighbors</code>指定预测数据距离最近的训练样本的数量，参数<code>weights</code>指定最近样本决定预测数据的方式，<code>uniform</code>表示所有样本权重一致，此外还有<code>distance</code>，表示样本按距离远近的倒数赋予相应权值。<code>score()</code>方法返回模型在测试集上的准确率。</p>
+<h3 id="linear-regression">线性回归Linear Regression</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> linear_model
+
+model <span style="color:#f92672">=</span> linear_model<span style="color:#f92672">.</span>LinearRegression()
+model<span style="color:#f92672">.</span>fix(X_train, y_train)
+model<span style="color:#f92672">.</span>score(X_test, y_test)
+</code></pre></div><p>根据参数设置，利用数据集<code>X_train</code>与其对应标签<code>y_train</code>训练模型。<code>LinearRegression()</code>生成LinearRegression类实例，<code>score()</code>方法返回模型在测试集上的准确率,即计算R平方值。</p>
+<h3 id="svm">支持向量机SVM</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.svm <span style="color:#f92672">import</span> SVC
+
+model <span style="color:#f92672">=</span> SVC(kernel <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">linear</span><span style="color:#e6db74">&#39;</span>,C <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span> gamma <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span>)
+model<span style="color:#f92672">.</span>fix(X_train, y_train)
+model<span style="color:#f92672">.</span>score(X_test, y_test)
+</code></pre></div><p>根据参数设置，利用数据集<code>X_train</code>与其对应标签<code>y_train</code>训练模型。<code>SVC()</code>生成SVC类实例，参数<code>kernel</code>指定kernel函数，参数<code>C</code>指定错误惩罚程度，该参数越大，对错误样本惩罚值越高，越可能导致过度拟合。<code>score()</code>方法返回模型在测试集上的准确率,即计算R平方值。</p>
+<h3 id="decision-tree">决策树Decision Tree</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> tree
+
+model <span style="color:#f92672">=</span> tree<span style="color:#f92672">.</span>DecisionTreeClassifier(max_depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, criterion <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">entropy</span><span style="color:#e6db74">&#39;</span>)
+model<span style="color:#f92672">.</span>fit(X_train, y_train)
+tree<span style="color:#f92672">.</span>export_graphviz(model<span style="color:#f92672">.</span>tree_, out_file<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">tree.dot</span><span style="color:#e6db74">&#39;</span>, feature_names<span style="color:#f92672">=</span>X<span style="color:#f92672">.</span>columns)
+</code></pre></div><p>根据参数设置，利用数据集<code>X_train</code>与其对应标签<code>y_train</code>训练模型。<code>DecisionTreeClassifier()</code>生成DecisionTreeClassifier类实例，参数<code>max_depth</code>指定树的深度；参数<code>criterion</code>指定树分支的计算指标，默认为Gini系数，&lsquo;entropy'计算商。<code>tree.export_graphviz()</code>方法输出训练后模型的可视化图像文件，该图像文件需系统中安装树可视化软件<a href="http://www.graphviz.org/">graphviz</a>。</p>
+<h3 id="random-forest">随机森林Random Forest</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.ensemble <span style="color:#f92672">import</span> RandomForestClassifier
+
+model <span style="color:#f92672">=</span> RandomForestClassifier(n_estimators <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>)
+model<span style="color:#f92672">.</span>fit(X_train, y_train)
+</code></pre></div><p>根据参数设置，利用数据集<code>X_train</code>与其对应标签<code>y_train</code>训练模型。参数<code>n_estimators</code>指定随机森林中数的数量。</p>
+<h2 id="heading-12">模型评价与整合</h2>
+<h3 id="confusion-metrix">Confusion Metrix</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sklearn.metrics <span style="color:#f92672">as</span> metrics
+
+metrics<span style="color:#f92672">.</span>confusion_matrix(y_true, y_pred)
+</code></pre></div><p>输出度量Confusion Metrix，每行表示每类实际结果的预测分布情况，每列表示每类预测结果的实际值分布情况。以下给出Confusion Metrix与imshow图像的结合应用的例子:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+
+columns <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Cat</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Dog</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Monkey</span><span style="color:#e6db74">&#39;</span>]
+confusion <span style="color:#f92672">=</span> metrics<span style="color:#f92672">.</span>confusion_matrix(y_true, y_pred)
+
+plt<span style="color:#f92672">.</span>imshow(confusion, cmap<span style="color:#f92672">=</span>plt<span style="color:#f92672">.</span>cm<span style="color:#f92672">.</span>Blues, interpolation<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">nearest</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>xticks([<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>], columns, rotation<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">vertical</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>yticks([<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>], columns)
+plt<span style="color:#f92672">.</span>colorbar()
+
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><h3 id="validation">验证Validation</h3>
+<h4 id="heading-13">度量矩阵</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sklearn.metrics <span style="color:#f92672">as</span> metrics
+y_true <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>]
+y_pred <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+
+<span style="color:#75715e"># recall = true_positives / (true_positives + false_negatives)</span>
+metrics<span style="color:#f92672">.</span>recall_score(y_true, y_pred, average<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">weighted</span><span style="color:#e6db74">&#39;</span>)   <span style="color:#75715e">#average参数用于指定各类平均方法</span>
+<span style="color:#75715e"># precision = true_positives / (true_positives + false_positives)</span>
+metrics<span style="color:#f92672">.</span>precision_score(y_true, y_pred, average<span style="color:#f92672">=</span>None)
+<span style="color:#75715e"># F1 = 2 * (precision * recall) / (precision + recall)</span>
+metrics<span style="color:#f92672">.</span>f1_score(y_true, y_pred, average<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">weighted</span><span style="color:#e6db74">&#39;</span>)
+
+target_names <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">name 1</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">name 2</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">name 3</span><span style="color:#e6db74">&#39;</span>]
+metrics<span style="color:#f92672">.</span>classification_report(y_true, y_pred, target_names<span style="color:#f92672">=</span>target_names)
+</code></pre></div><h4 id="cross-validation">Cross Validation</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> cross_validation <span style="color:#66d9ef">as</span> cval
+cval<span style="color:#f92672">.</span>cross_val_score(model, X_train, y_train, cv<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>) <span style="color:#75715e">#返回每组的训练集下的准确度 cv制定分组数</span>
+cval<span style="color:#f92672">.</span>cross_val_score(model, X_train, y_train, cv<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>mean() <span style="color:#75715e">#返回平均值</span>
+</code></pre></div><h3 id="grid-search">模型参数调整<code>grid_search</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn <span style="color:#f92672">import</span> grid_search
+
+parameters <span style="color:#f92672">=</span> {<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">kernel</span><span style="color:#e6db74">&#39;</span>:(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">linear</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">rbf</span><span style="color:#e6db74">&#39;</span>), <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">C</span><span style="color:#e6db74">&#39;</span>:[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>]}
+model <span style="color:#f92672">=</span> svm<span style="color:#f92672">.</span>SVC()
+classifier <span style="color:#f92672">=</span> grid_search<span style="color:#f92672">.</span>GridSearchCV(model, parameters)  
+classifier<span style="color:#f92672">.</span>fit(X_train, y_train)
+<span style="color:#75715e">#以上根据参数的可能性，进行组合比较训练，得到最佳的模型参数</span>
+
+parameter_dist <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">C</span><span style="color:#e6db74">&#39;</span>: scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>expon(scale<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>),
+  <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">kernel</span><span style="color:#e6db74">&#39;</span>: [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">linear</span><span style="color:#e6db74">&#39;</span>],
+  <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">gamma</span><span style="color:#e6db74">&#39;</span>: scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>expon(scale<span style="color:#f92672">=</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>),
+}
+classifier <span style="color:#f92672">=</span> grid_search<span style="color:#f92672">.</span>RandomizedSearchCV(model, parameters_dist)  
+classifier<span style="color:#f92672">.</span>fit(X_train, y_train)
+<span style="color:#75715e">#以上根据参数的所指定的分布，进行组合比较训练，得到最佳的模型参数</span>
+</code></pre></div><h3 id="pipeline">模型Pipeline</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.pipeline <span style="color:#f92672">import</span> Pipeline
+svc <span style="color:#f92672">=</span> svm<span style="color:#f92672">.</span>SVC(kernel<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">linear</span><span style="color:#e6db74">&#39;</span>)
+pca <span style="color:#f92672">=</span> RandomizedPCA()
+pipeline <span style="color:#f92672">=</span> Pipeline([(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">pca</span><span style="color:#e6db74">&#39;</span>, pca),(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">svc</span><span style="color:#e6db74">&#39;</span>, svc)])
+pipeline<span style="color:#f92672">.</span>set_params(pca__n_components<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, svc__C<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, svc__gamma<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0001</span>)
+pipeline<span style="color:#f92672">.</span>fit(X, y)
+</code></pre></div><p>将多个模型由前至后连接，整合成一个机器学习模型。需要注意的是中间模型需要有<code>.fit()</code> <code>.transform()</code>方法 ，如果原类无对应方法，可以自定义相对应的方法，以适应Pipeline的运行。</p>
+</div>
+
+                    </div>
+                    <div class="col-lg-3 col-12" id="sidebar">
+                        <div id="brief-intro">
+    <div class="sidebar-title">About</div>
+    <p>我喜欢自称砖瓦匠，我不叫杜重，杜重是我的笔名。欢迎来到我的博客。这里是我对世界、对自己思考的地方。</p>
+    <p>我喜欢人与人之间的接触，在这里我想：和大家分享看法观点；总结各种经验；记录真实的自己。</p>
+    <p>我有时也耐得住孤独，在这里之外：我常有兴趣去发现、钻研、构思着什么；经营着自己丰富的内心；在追求幸福生活的道路上努力。</p>
+    <p>谢谢你有缘能来到这里，谢谢你留下时光匆匆！</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </main><footer class="blog-footer">
+    <div class="container bodycontainer">
+        <div id="footer-info" class="inner">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span>
+            |
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_uv"></span></span>
+        </div>
+      <div id="footer-info" class="inner">
+        Powered by <a href="http://https://gohugo.io/" target="_blank">Hugo</a>
+        |
+        &copy; 2017 - 2021
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+        砖瓦匠杜重
+      </div>
+    </div>
+</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
