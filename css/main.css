@@ -10,8 +10,10 @@ a{
     text-decoration: none;
 }
 
-.main{
-    padding-right: 150px;
+@media(min-width: 992px){
+    .main{
+        padding-right: 10%;
+    }
 }
 
 /* title - logo */
@@ -32,7 +34,16 @@ a{
 }
 
 .blog-header{
+    width: 280px;
     margin-bottom: 40px;
+}
+
+@media(max-width: 576px){
+    .blog-header{
+        width: 280px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
 }
 
 /* navibar - 导航栏 */
@@ -58,7 +69,7 @@ a{
     margin-bottom: 20px;
 }
 
-@media(max-width: 720px){
+@media(max-width: 767px){
     #sidebar{
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -123,4 +134,11 @@ img{
     display: block;
     max-width: 85%;
     margin: auto;
+}
+
+
+/* footer */
+.blog-footer {
+    text-align: center;
+    color: #919EB1;
 }
