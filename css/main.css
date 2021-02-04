@@ -17,6 +17,11 @@ a{
 }
 
 /* title - logo */
+.headbar{
+    background-color: #993b28;
+    min-height: 2.5px;
+}
+
 #title-logo{
     float: left;
     display: block;
@@ -80,11 +85,16 @@ a{
 /* post - metadata */
 .post-title{
     font-size: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
+
+.post-title a{
+    color: #3A6bA5;
+}
+
 .post-metadata{
     color: #919EB1;
-    margin-bottom: 15px;
+    font-size: 95%;
 }
 
 .post-metadata-time{
