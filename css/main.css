@@ -5,6 +5,10 @@
     /* padding-right: 80px; */
 }
 
+main .bodycontainer{
+    margin-top: 20px;
+}
+
 a{
     color: #3A6bA5;
     text-decoration: none;
@@ -85,16 +89,19 @@ a{
 /* post - metadata */
 .post-title{
     font-size: 24px;
-    margin-bottom: 15px;
 }
 
 .post-title a{
     color: #3A6bA5;
 }
 
+.post-metadata .far{
+    margin-right: 5px;
+}
+
 .post-metadata{
     color: #919EB1;
-    font-size: 95%;
+    margin-bottom: 15px;
 }
 
 .post-metadata-time{
