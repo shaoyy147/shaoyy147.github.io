@@ -130,6 +130,83 @@ a{
 }
 
 /* single page style */
+
+.single-title{
+    text-align: center;
+    font-size: 32px;
+}
+
+.single-metadata{
+    text-align: center;
+    color: #919EB1;
+    margin-bottom: 30px;
+}
+
+.single-metadata .far{
+    margin-right: 5px;
+}
+.single-metadata-time{
+    margin-right: 10px;
+}
+
+/* for basic style */
+h2, h3, h4{
+    border-left-style: solid;
+    border-left-color: #993b28;
+    padding-left: 10px;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+h2{
+    font-size: 160%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 125%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h4{
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+blockquote{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #F7F3F3;
+    padding: 1.2em 30px 1.2em 50px;
+}
+
+blockquote::before{
+    content: "\201C";
+    font-family: times;
+    font-style: normal;
+    font-size: 48px;
+    color: #993b28;
+    font-weight: bold;
+    line-height: 30px;
+    margin-left: -40px;
+    position: absolute; 
+}
+
+blockquote p{
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
+blockquote cite{
+    font-style: normal;
+}
+
 /* for the code */
 pre{
     max-width: 90%; 
