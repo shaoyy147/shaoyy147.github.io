@@ -119,10 +119,7 @@ $( document ).ready(function() {
 <div class="single-content">
     <p>因为国内学校VPN已无法使用（毕业半年内还能爽快使用，还心想没有人会关注这个，兴许能用很久，一跨年信息管理门户就开始清理账号了），在海外使用国内音乐服务，网易云、QQ音乐等非常不便，加之“网络回国”相关服务价格不菲，索性买个云主机（感谢阿里云的<a href="https://promotion.aliyun.com/ntms/act/campus2018.html">学生优惠</a>）搭建一套自己的回国专线。</p>
 <p>以下记录了自己搭建的过程，踩过几个不大不小的坑。</p>
-<p>{% callout info %}</p>
-<h4 id="info">Info</h4>
-<p>自己选用的云主机服务是，阿里云轻量应用服务器，预装系统镜像<strong>ubuntu 16.04</strong>
-{% endcallout %}</p>
+<p>(自己选用的云主机服务是，阿里云轻量应用服务器，预装系统镜像<strong>ubuntu 16.04</strong>)</p>
 <h2 id="heading">安装相关工具</h2>
 <p>为了安装Shadowsocks,，我们首先需要更新Python包管理器Pip以及安装Git，在这之前我们最好更新一下ubuntu包管理器apt的软件列表。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#更新apt软件列表</span>
@@ -169,6 +166,22 @@ option --user not recognized
 <pre><code>127.0.1.1  xxxxxxxxxxx(用报错给出的一串字符替换这里)
 </code></pre><p>最后在Shadowsocks客户端，填写好服务器地址、端口、密码就应该可以使用了。</p>
 </div>
+
+
+<div id="disqus_thread", style="margin-top: 100px;margin-bottom: 50px;"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url = "https:\/\/www.yyshao.com\/2019\/01\/12\/ss-server\/";  
+    this.page.identifier = "ss-server"; 
+    };
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yshao.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
                     </div>
                     <div class="col-lg-3 col-12" id="sidebar">
