@@ -119,7 +119,17 @@ $( document ).ready(function() {
 <div class="single-content">
     <p>因为国内学校VPN已无法使用（毕业半年内还能爽快使用，还心想没有人会关注这个，兴许能用很久，一跨年信息管理门户就开始清理账号了），在海外使用国内音乐服务，网易云、QQ音乐等非常不便，加之“网络回国”相关服务价格不菲，索性买个云主机（感谢阿里云的<a href="https://promotion.aliyun.com/ntms/act/campus2018.html">学生优惠</a>）搭建一套自己的回国专线。</p>
 <p>以下记录了自己搭建的过程，踩过几个不大不小的坑。</p>
-<p>(自己选用的云主机服务是，阿里云轻量应用服务器，预装系统镜像<strong>ubuntu 16.04</strong>)</p>
+
+
+<div class="info">
+    <div class="info-title">
+        Info
+    </div>
+    <div class="info-content">
+        <p>自己选用的云主机服务是，阿里云轻量应用服务器，预装系统镜像<strong>ubuntu 16.04</strong></p>
+
+    </div>
+</div>
 <h2 id="heading">安装相关工具</h2>
 <p>为了安装Shadowsocks,，我们首先需要更新Python包管理器Pip以及安装Git，在这之前我们最好更新一下ubuntu包管理器apt的软件列表。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#更新apt软件列表</span>
