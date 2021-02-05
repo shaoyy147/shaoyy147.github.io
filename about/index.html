@@ -29,45 +29,6 @@ $( document ).ready(function() {
 
 <script src="https://kit.fontawesome.com/4ea32cfd08.js" crossorigin="anonymous"></script>
 
-
-
-<link rel="stylesheet" href="/highlight/tomorrow.css">
-<script src="/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
-<script>hljs.initLineNumbersOnLoad();</script>
-
-
-
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 <body>
         <div class="headbar"></div>
         <div class="container-md bodycontainer"><div class="d-flex justify-content-lg-start justify-content-center">
@@ -97,7 +58,7 @@ $( document ).ready(function() {
       
 
       
-      <li class="breadcrumb-item"><a href="https://www.yyshao.com/about/"><i class="fas fa-user"></i>关于</a></li>
+      <li class="breadcrumb-item"><i class="fas fa-user"></i>关于</li>
       
 
       <li class="breadcrumb-item active"><a href="https://moments.yyshao.com"><i class="fas fa-clock"></i>点滴</a></li>
@@ -111,18 +72,36 @@ $( document ).ready(function() {
                     <div class="col-lg-9 col-12 main">
                         
 <div class="single-title"> 
-    在Windows下清除ssh-key私钥访问密码
-</div>
-<div class="single-metadata"> 
-    <span class="single-metadata-time"><i class="far fa-calendar-alt"></i>2017-12-25</span><span class="single-metadata-category"><i class="far fa-folder"></i>技术</span>
+    关于
 </div>
 <div class="single-content">
-    <p>之前在配置Github时候，给本地生成的ssh-key加上了访问密码，因为所有ssh连接均采用了同一个key，给之后访问带来了很多的不便，查询相关资料找到取消该访问密码的方式。</p>
-<p>首先，需要打开git-bash，（<strong>注意</strong>这里是不能使用Windows系统自带的终端或者powershell）输入命令</p>
-<pre><code>ssh-keygen -p
+    <h2 id="heading">自我介绍</h2>
+<p>我叫Y.Shao。本科在<a href="http://math.bnu.edu.cn/">积水潭师专</a>学数学。现在研究生念统计。</p>
+<p>如果让我介绍一下自己，我想想后，可能会这样告诉你：</p>
+<ul>
+<li>自小有浓厚的计算机兴趣，正努力寻求数学与计算机的结合。</li>
+<li>喜欢运动，喜欢团队竞技，尤其喜欢足球。</li>
+<li>爱思考，爱总结，爱分享经验。</li>
+<li>喜欢码字，喜欢Coding。</li>
+<li>欢迎了解新观点，欢迎讨论想法。</li>
+<li>经常会有脑洞大开的奇葩Idea。</li>
+<li>常在细节上折腾；欣赏细节中的优雅与智慧。</li>
+<li>一直试图在寻找事物背后的统一，相信无关事件中存在必然。</li>
+<li>不喜欢琐碎繁杂，追求高效、程序化、归一化的规则。</li>
+</ul>
+<blockquote>
+<p>本人阅历尚浅，认识难免不够全面深刻，若文章观点有失偏颇，接受任何形式的批评、指正。谢谢！</p>
+</blockquote>
+<h2 id="heading-1">联系本人</h2>
+<p>如您有任何想法，想与我取得联系，以下是我的联系方式</p>
+<ul>
+<li>E-mail：yy_shao*(at)*outlook.com（请将at替换为@）</li>
+</ul>
+<p>随时欢迎任何形式的讨论！</p>
+<blockquote>
+<p>如您有任何想表达的，可以在下方给我留言！</p>
+</blockquote>
 
-Enter file in which the key is(/c/Users/YourUserName/.ssh/id_rsa):
-</code></pre><p>命令会自动定位到默认生成的私钥，输入原始密码，在提示输入新密码时候，直接2次回车确认即可。</p>
 </div>
 
                     </div>

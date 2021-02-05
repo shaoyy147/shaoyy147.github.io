@@ -93,6 +93,16 @@
   </url>
   
   <url>
+    <loc>https://www.yyshao.com/about/</loc>
+    <lastmod>2017-07-25T21:36:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yyshao.com/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.yyshao.com/categories/</loc>
   </url>
   

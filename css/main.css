@@ -232,7 +232,13 @@ img{
 
 
 /* footer */
-.blog-footer {
+.blog-footer .container{
     text-align: center;
     color: #919EB1;
+    border-top-style: solid;
+    border-top-color: #F7F3F3;
+    border-top-width: 0.5px;
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-bottom: 40px;
 }
