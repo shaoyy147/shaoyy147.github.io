@@ -28,6 +28,29 @@ $( document ).ready(function() {
 <script src="https://kit.fontawesome.com/4ea32cfd08.js" crossorigin="anonymous"></script>
 
 
+<script>
+  
+  
+  
+  
+  
+  
+  
+  
+  $(function () {
+  $(window).scroll(function () {
+      if ($(window).scrollTop() >= 500) {
+          $('#topBtn').fadeIn(400);
+      }
+      else {
+          $('#topBtn').fadeOut(400);
+      }
+  });
+});
+</script>
+
+
+
 
 <link rel="stylesheet" href="/highlight/tomorrow.css">
 <script src="/highlight/highlight.pack.js"></script>
@@ -66,6 +89,11 @@ $( document ).ready(function() {
   TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
 </script>
+
+
+
+<script src="/toc/bootstrap-toc.js"></script>
+<link rel="stylesheet" type="text/css" href="/toc/bootstrap-toc.css">
 <title>
             
 Programming with Python for Data Science学习笔记
@@ -74,7 +102,7 @@ Programming with Python for Data Science学习笔记
 
         </title>
     </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target="#toc">
         <div class="headbar"></div>
         <div class="container-md bodycontainer"><div class="d-flex justify-content-lg-start justify-content-center">
     <div class="blog-header">
@@ -411,16 +439,30 @@ pipeline<span style="color:#f92672">.</span>fit(X, y)
                     </div>
                     <div class="col-lg-3 col-12" id="sidebar">
                         <div id="brief-intro">
-    <div class="sidebar-title">About</div>
-    <p>我喜欢自称砖瓦匠，我不叫杜重，杜重是我的笔名。欢迎来到我的博客。这里是我对世界、对自己思考的地方。</p>
-    <p>我喜欢人与人之间的接触，在这里我想：和大家分享看法观点；总结各种经验；记录真实的自己。</p>
-    <p>我有时也耐得住孤独，在这里之外：我常有兴趣去发现、钻研、构思着什么；经营着自己丰富的内心；在追求幸福生活的道路上努力。</p>
+    <div class="sidebar-title">作者</div>
+    <p>我不叫杜重，杜重是我的笔名。我喜欢自称砖瓦匠。欢迎来到我的博客，这是我对世界、对自己思考的地方。</p>
     <p>谢谢你有缘能来到这里，谢谢你留下时光匆匆！</p>
 </div>
+
+
+<div class="toc-div d-none d-sm-block">
+<div class="sidebar-title">目录</div>
+<nav id="toc" data-bs-spy="affix" data-toggle="toc"></nav>
+</div>
+
+
+
                     </div>
                 </div>
             </div>
-        </main><footer class="blog-footer">
+        </main>
+
+
+        <span id="topBtn" class="hidden-xs">
+            <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'fast');return false;">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </span><footer class="blog-footer">
     <div class="container bodycontainer">
         <div id="footer-info" class="inner">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -440,5 +482,10 @@ pipeline<span style="color:#f92672">.</span>fit(X, y)
     </div>
 </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script>
+            anchors.add("h2, h3");
+        </script>
     </body>
 </html>

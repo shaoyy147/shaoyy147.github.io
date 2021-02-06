@@ -85,6 +85,33 @@ a{
     }
 }
 
+.toc-div {
+    position: -webkit-sticky; /* safari 浏览器 */
+    position: sticky; /* 其他浏览器 */
+    top: 20px;
+    margin-top: 20px;
+}
+
+.toc-div>.sidebar-title{
+    padding-left: 10px;
+}
+
+#topBtn {
+    display:  none;
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 80px;
+    right: 15%;
+    font-size: 150%;
+}
+#topBtn a{
+    background-color: #F7F3F3;
+    padding: 40%;
+    border-radius: 45%;
+}
+#topBtn i{
+    color: #993b28;
+}
+
 /* post - 文章 */
 /* post - metadata */
 .post-title{
