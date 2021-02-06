@@ -16,7 +16,7 @@
 
 <script>
 $( document ).ready(function() {
-    $(".post-content img").each(function(){
+    $(".single-content img").each(function(){
     var ref = $(this).attr('src')
     var wrap_structure = "<a data-fancybox='images' href='" + ref +  "'></a>"
     $(this).wrap(wrap_structure)
@@ -445,7 +445,7 @@ pipeline<span style="color:#f92672">.</span>fit(X, y)
 </div>
 
 
-<div class="toc-div d-none d-sm-block">
+<div class="toc-div d-none d-lg-block">
 <div class="sidebar-title">目录</div>
 <nav id="toc" data-bs-spy="affix" data-toggle="toc"></nav>
 </div>
