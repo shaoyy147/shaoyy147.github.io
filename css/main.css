@@ -172,8 +172,8 @@ a{
 .single-metadata .far{
     margin-right: 5px;
 }
-.single-metadata-time{
-    margin-right: 10px;
+.single-metadata-time, .single-metadata-category{
+    margin-right: 20px;
 }
 
 /* for basic style */
