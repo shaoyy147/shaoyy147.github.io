@@ -126,16 +126,7 @@ a{
 .post-title{
     font-size: 24px;
     margin-bottom: 5px;
-    
 }
-/* .post-title::before{
-    content: "「";
-    color: #3A6bA5;
-}
-.post-title::after{
-    content: "」";
-    color: #3A6bA5;
-} */
 
 .post-title a{
     color: #333E40;
@@ -205,11 +196,7 @@ p code,li code, h2 code, h3 code, h4 code{
     margin-left: 5px;
     margin-right: 5px;
 }
-
 h2, h3, h4{
-    border-left-style: solid;
-    border-left-color: #3A6bA5;
-    padding-left: 10px;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     color: #333E40;
@@ -228,6 +215,10 @@ h3{
 }
 
 h4{
+    padding-left: 10px;
+    margin-left: -12px ;
+    border-left-style: solid;
+    border-left-color: #3A6bA5;
     font-size: 100%;
     font-weight: bold;
     margin-top: 10px;

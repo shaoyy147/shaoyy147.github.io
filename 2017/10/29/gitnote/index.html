@@ -74,6 +74,11 @@ $( document ).ready(function() {
 
 
 
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+
+
 <title>
             
 Git学习笔记
@@ -82,7 +87,7 @@ Git学习笔记
 
         </title>
     </head>
-    <body data-bs-spy="scroll" data-bs-target="#TableOfContents" method="position">
+    <body data-bs-spy="scroll" data-bs-target="#TableOfContents">
         
         <div class="container-md bodycontainer"><div id="header-all-part">
 <div class="headbar" id="top-line"></div>
@@ -273,24 +278,9 @@ Step 2. 将用户目录下.ssh文件id_rsa.pub复制到Github上
 </code></pre>
 </div>
 
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
 
 <div id="comments", style="margin-top: 100px;margin-bottom: 50px;"></div>
-<script>
-    const gitment = new Gitment({
-        id: 'gitnote', 
-        owner: 'shaoyy147',
-        repo: 'gitment',
-        oauth: {
-        client_id: '76d8e41e2b8cdfaf3378',
-        client_secret: '4c3fef984f53ef217c3e1b70f73f33f4a219d522',
-        },
-        
-        
-    })
-    gitment.render('comments')
-</script>
 
 
 
@@ -349,6 +339,7 @@ Step 2. 将用户目录下.ssh文件id_rsa.pub复制到Github上
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         
+        
         <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
         <script>
             anchors.options = {
@@ -358,5 +349,21 @@ Step 2. 将用户目录下.ssh文件id_rsa.pub复制到Github上
             };
             anchors.add("h2, h3");
         </script>
+        
+        <script>
+            const gitment = new Gitment({
+                id: 'gitnote', 
+                owner: 'shaoyy147',
+                repo: 'shaoyy147.github.io',
+                oauth: {
+                client_id: '76d8e41e2b8cdfaf3378',
+                client_secret: '4c3fef984f53ef217c3e1b70f73f33f4a219d522',
+                },
+                
+                
+            })
+            gitment.render('comments')
+        </script>
+        
     </body>
 </html>
