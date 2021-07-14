@@ -28,29 +28,6 @@ $( document ).ready(function() {
 <script src="https://kit.fontawesome.com/4ea32cfd08.js" crossorigin="anonymous"></script>
 
 
-<script>
-  
-  
-  
-  
-  
-  
-  
-  
-  $(function () {
-  $(window).scroll(function () {
-      if ($(window).scrollTop() >= 500) {
-          $('#topBtn').fadeIn(400);
-      }
-      else {
-          $('#topBtn').fadeOut(400);
-      }
-  });
-});
-</script>
-
-
-
 
 <link rel="stylesheet" href="/highlight/tomorrow.css">
 <script src="/highlight/highlight.pack.js"></script>
@@ -93,8 +70,9 @@ $( document ).ready(function() {
 
 
 
-<script src="/toc/bootstrap-toc.js"></script>
 <link rel="stylesheet" type="text/css" href="/toc/bootstrap-toc.css">
+
+
 
 <title>
             
@@ -104,11 +82,12 @@ $( document ).ready(function() {
 
         </title>
     </head>
-    <body data-bs-spy="scroll" data-bs-target="#toc">
-        <div class="headbar"></div>
-        <div class="container-md bodycontainer"><div class="d-flex justify-content-lg-start justify-content-center">
+    <body data-bs-spy="scroll" data-bs-target="#TableOfContents" method="position">
+        
+        <div class="container-md bodycontainer"><div id="header-all-part">
+<div class="headbar" id="top-line"></div>
+<div class="d-flex justify-content-lg-start justify-content-center">
     <div class="blog-header">
-        <img class="d-none d-sm-block" src="https://www.yyshao.com/avatar.jpg" alt="avatar" id="title-logo">
         <div>
             <div id="blog-title">
                 砖瓦匠杜重
@@ -119,6 +98,7 @@ $( document ).ready(function() {
         </div>
     </div>
 </div>
+
 
 <div class="d-none d-sm-block">
     <nav aria-label="breadcrumb" class="navbar d-flex justify-content-lg-start justify-content-center">
@@ -162,13 +142,12 @@ $( document ).ready(function() {
           <li class="breadcrumb-item active"><a href="https://moments.yyshao.com">点滴</a></li>
         </ol>
     </nav>
-</div></div>
+</div>
 
-        <main>
-            <div class="container-md bodycontainer">
-                <div class="row">
-                    <div class="col-lg-9 col-12 main">
-                        
+<div class="headbar" id="bottom-line"></div>
+</div><div class="row">
+                <div class="col-lg-9 col-12 main" >
+                    
 <div class="single-title"> 
     一个用于合并pdf的简单Python脚本
 </div>
@@ -238,25 +217,32 @@ $( document ).ready(function() {
 </code></pre></div>
 </div>
 
-
-<div id="disqus_thread", style="margin-top: 100px;margin-bottom: 50px;"></div>
-<script>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
     var disqus_config = function () {
-    this.page.url = "https:\/\/www.yyshao.com\/2018\/06\/20\/python-pdf-merge\/";  
-    this.page.identifier = "python-pdf-merge"; 
+    
+    
+    
     };
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://yshao.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yshao" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-                    </div>
-                    <div class="col-lg-3 col-12" id="sidebar">
-                        <div id="brief-intro">
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                </div>
+                <div class="col-lg-3 col-12" id="sidebar">
+                    <div id="brief-intro">
     <div class="sidebar-title">作者</div>
     <p>我不叫杜重，杜重是我的笔名。我喜欢自称砖瓦匠。欢迎来到我的博客，这是我对世界、对自己思考的地方。</p>
     <p>谢谢你有缘能来到这里，谢谢你留下时光匆匆！</p>
@@ -264,23 +250,34 @@ $( document ).ready(function() {
 
 
 <div class="toc-div d-none d-lg-block">
-<div class="sidebar-title">目录</div>
-<nav id="toc" data-bs-spy="affix" data-toggle="toc"></nav>
+    <div class="sidebar-title">目录</div>
+    
+    
+    
+    <nav id="TableOfContents" data-toggle="toc">
+  <ul class="nav navbar-nav">
+    <li><a class="nav-link" href="#heading">使用方法</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#heading-1">必要的安装</a></li>
+        <li><a class="nav-link" href="#heading-2">使用</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-link" href="#tips">使用Tips</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#pdf">按顺序合并pdf文件</a></li>
+        <li><a class="nav-link" href="#pdf-1">重复合并同一pdf文件</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-link" href="#heading-3">脚本代码</a></li>
+  </ul>
+</nav> 
+    
 </div>
 
 
 
-                    </div>
                 </div>
-            </div>
-        </main>
-
-
-        <span id="topBtn" class="hidden-xs">
-            <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'fast');return false;">
-                <i class="fas fa-arrow-up"></i>
-            </a>
-        </span><footer class="blog-footer">
+            </div><footer class="blog-footer">
     <div class="container bodycontainer">
         <div id="footer-info" class="inner">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -298,12 +295,14 @@ $( document ).ready(function() {
         砖瓦匠杜重
       </div>
     </div>
-</footer>
+</footer></div>
+
+
+        
+
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-        <script>
-            anchors.add("h2, h3");
-        </script>
+        
     </body>
 </html>

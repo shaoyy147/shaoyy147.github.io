@@ -15,19 +15,19 @@ nav[data-toggle="toc"] .nav > li > a {
 nav[data-toggle="toc"] .nav > li > a:hover,
 nav[data-toggle="toc"] .nav > li > a:focus {
   padding-left: 19px;
-  color: #993b28;
+  color: #3A6bA5;
   text-decoration: none;
   background-color: transparent;
-  border-left: 1px solid #993b28;
+  border-left: 1px solid #3A6bA5;
 }
 nav[data-toggle="toc"] .nav-link.active,
 nav[data-toggle="toc"] .nav-link.active:hover,
 nav[data-toggle="toc"] .nav-link.active:focus {
   padding-left: 18px;
   font-weight: bold;
-  color: #993b28;
+  color: #3A6bA5;
   background-color: transparent;
-  border-left: 2px solid #993b28;
+  border-left: 2px solid #3A6bA5;
 }
 
 /* Nav: second level (shown on .active) */

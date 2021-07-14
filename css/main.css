@@ -1,8 +1,16 @@
 /* 主框架 & 通用设置 */
+body{
+    background-color: #DBDEE2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
 .bodycontainer{
-    /* max-width: 1150px; */
-    margin-top: 50px;
-    /* padding-right: 80px; */
+    max-width: 1150px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
 }
 
 main .bodycontainer{
@@ -21,15 +29,17 @@ a{
 }
 
 /* title - logo */
-.headbar{
-    background-color: #993b28;
-    min-height: 2.5px;
+#header-all-part{
+    margin-bottom: 40px;
+}
+#top-line{
+    background-color: #333E40;
+    min-height: 3px;
 }
 
-#title-logo{
-    float: left;
-    display: block;
-    width: 84px; height: 84px;
+#bottom-line{
+    background-color: #919EB1;
+    min-height: 2px;
 }
 
 #blog-title{
@@ -43,13 +53,12 @@ a{
 }
 
 .blog-header{
-    width: 280px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-@media(max-width: 576px){
+@media(max-width: 960px){
     .blog-header{
-        width: 280px;
         margin-bottom: 40px;
         text-align: center;
     }
@@ -65,7 +74,7 @@ a{
 /* sidebar - 侧边栏 - 简短介绍 */
 
 #brief-intro{
-    background-color: #F7F3F3;
+    background-color: #f5f6f8;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -104,22 +113,35 @@ a{
     font-size: 150%;
 }
 #topBtn a{
-    background-color: #F7F3F3;
+    background-color: #f5f6f8;
     padding: 40%;
     border-radius: 45%;
 }
 #topBtn i{
-    color: #993b28;
+    color: #3A6bA5;
 }
 
 /* post - 文章 */
 /* post - metadata */
 .post-title{
     font-size: 24px;
+    margin-bottom: 5px;
+    
 }
+/* .post-title::before{
+    content: "「";
+    color: #3A6bA5;
+}
+.post-title::after{
+    content: "」";
+    color: #3A6bA5;
+} */
 
 .post-title a{
-    color: #3A6bA5;
+    color: #333E40;
+    text-decoration: underline;
+    text-decoration-color: #919EB1;
+    text-underline-offset: 5px;
 }
 
 .post-metadata .far{
@@ -128,7 +150,7 @@ a{
 
 .post-metadata{
     color: #919EB1;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .post-metadata-time{
@@ -139,12 +161,12 @@ a{
     margin-top: 15px;
     padding-right: 15px;
     text-align: right;
-    color: #993b28;
+    color: #3A6bA5;
 }
 
 .read-more>a{
     text-decoration: underline;
-    color: #993b28;
+    color: #3A6bA5;
 }
 
 .seperate-line{
@@ -177,12 +199,20 @@ a{
 }
 
 /* for basic style */
+p code,li code, h2 code, h3 code, h4 code{
+    color: #993b28;
+    background-color: #F7F3F3;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 h2, h3, h4{
     border-left-style: solid;
-    border-left-color: #993b28;
+    border-left-color: #3A6bA5;
     padding-left: 10px;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
+    color: #333E40;
 }
 
 h2{

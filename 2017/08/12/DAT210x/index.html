@@ -28,29 +28,6 @@ $( document ).ready(function() {
 <script src="https://kit.fontawesome.com/4ea32cfd08.js" crossorigin="anonymous"></script>
 
 
-<script>
-  
-  
-  
-  
-  
-  
-  
-  
-  $(function () {
-  $(window).scroll(function () {
-      if ($(window).scrollTop() >= 500) {
-          $('#topBtn').fadeIn(400);
-      }
-      else {
-          $('#topBtn').fadeOut(400);
-      }
-  });
-});
-</script>
-
-
-
 
 <link rel="stylesheet" href="/highlight/tomorrow.css">
 <script src="/highlight/highlight.pack.js"></script>
@@ -93,8 +70,9 @@ $( document ).ready(function() {
 
 
 
-<script src="/toc/bootstrap-toc.js"></script>
 <link rel="stylesheet" type="text/css" href="/toc/bootstrap-toc.css">
+
+
 
 <title>
             
@@ -104,11 +82,12 @@ Programming with Python for Data Science学习笔记
 
         </title>
     </head>
-    <body data-bs-spy="scroll" data-bs-target="#toc">
-        <div class="headbar"></div>
-        <div class="container-md bodycontainer"><div class="d-flex justify-content-lg-start justify-content-center">
+    <body data-bs-spy="scroll" data-bs-target="#TableOfContents" method="position">
+        
+        <div class="container-md bodycontainer"><div id="header-all-part">
+<div class="headbar" id="top-line"></div>
+<div class="d-flex justify-content-lg-start justify-content-center">
     <div class="blog-header">
-        <img class="d-none d-sm-block" src="https://www.yyshao.com/avatar.jpg" alt="avatar" id="title-logo">
         <div>
             <div id="blog-title">
                 砖瓦匠杜重
@@ -119,6 +98,7 @@ Programming with Python for Data Science学习笔记
         </div>
     </div>
 </div>
+
 
 <div class="d-none d-sm-block">
     <nav aria-label="breadcrumb" class="navbar d-flex justify-content-lg-start justify-content-center">
@@ -162,13 +142,12 @@ Programming with Python for Data Science学习笔记
           <li class="breadcrumb-item active"><a href="https://moments.yyshao.com">点滴</a></li>
         </ol>
     </nav>
-</div></div>
+</div>
 
-        <main>
-            <div class="container-md bodycontainer">
-                <div class="row">
-                    <div class="col-lg-9 col-12 main">
-                        
+<div class="headbar" id="bottom-line"></div>
+</div><div class="row">
+                <div class="col-lg-9 col-12 main" >
+                    
 <div class="single-title"> 
     Programming with Python for Data Science学习笔记
 </div>
@@ -445,25 +424,32 @@ pipeline<span style="color:#f92672">.</span>fit(X, y)
 </code></pre></div><p>将多个模型由前至后连接，整合成一个机器学习模型。需要注意的是中间模型需要有<code>.fit()</code> <code>.transform()</code>方法 ，如果原类无对应方法，可以自定义相对应的方法，以适应Pipeline的运行。</p>
 </div>
 
-
-<div id="disqus_thread", style="margin-top: 100px;margin-bottom: 50px;"></div>
-<script>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
     var disqus_config = function () {
-    this.page.url = "https:\/\/www.yyshao.com\/2017\/08\/12\/DAT210x\/";  
-    this.page.identifier = "DAT210x"; 
+    
+    
+    
     };
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://yshao.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yshao" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-                    </div>
-                    <div class="col-lg-3 col-12" id="sidebar">
-                        <div id="brief-intro">
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                </div>
+                <div class="col-lg-3 col-12" id="sidebar">
+                    <div id="brief-intro">
     <div class="sidebar-title">作者</div>
     <p>我不叫杜重，杜重是我的笔名。我喜欢自称砖瓦匠。欢迎来到我的博客，这是我对世界、对自己思考的地方。</p>
     <p>谢谢你有缘能来到这里，谢谢你留下时光匆匆！</p>
@@ -471,23 +457,59 @@ pipeline<span style="color:#f92672">.</span>fit(X, y)
 
 
 <div class="toc-div d-none d-lg-block">
-<div class="sidebar-title">目录</div>
-<nav id="toc" data-bs-spy="affix" data-toggle="toc"></nav>
+    <div class="sidebar-title">目录</div>
+    
+    
+    
+    <nav id="TableOfContents" data-toggle="toc">
+  <ul class="nav navbar-nav">
+    <li><a class="nav-link" href="#heading">数据预处理</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#heading-1">数据读入</a></li>
+        <li><a class="nav-link" href="#csvpdread-csv">读入csv等文本文件pd.read_csv()</a></li>
+        <li><a class="nav-link" href="#dataframe">Dataframe数据集概览操作</a></li>
+        <li><a class="nav-link" href="#heading-6">数据集整理</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-link" href="#heading-7">数据可视化</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#heading-8">基础图像绘制</a></li>
+        <li><a class="nav-link" href="#heading-9">高维数据图像绘制</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-link" href="#heading-10">数据转换</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#pca">主成分分析PCA</a></li>
+        <li><a class="nav-link" href="#isomap">流形降维Isomap</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-link" href="#heading-11">机器学习算法</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#k-means">聚类K-Means</a></li>
+        <li><a class="nav-link" href="#kk-nearest-neighbors">K近邻K-Nearest Neighbors</a></li>
+        <li><a class="nav-link" href="#linear-regression">线性回归Linear Regression</a></li>
+        <li><a class="nav-link" href="#svm">支持向量机SVM</a></li>
+        <li><a class="nav-link" href="#decision-tree">决策树Decision Tree</a></li>
+        <li><a class="nav-link" href="#random-forest">随机森林Random Forest</a></li>
+      </ul>
+    </li>
+    <li><a class="nav-link" href="#heading-12">模型评价与整合</a>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" href="#confusion-metrix">Confusion Metrix</a></li>
+        <li><a class="nav-link" href="#validation">验证Validation</a></li>
+        <li><a class="nav-link" href="#grid-search">模型参数调整grid_search</a></li>
+        <li><a class="nav-link" href="#pipeline">模型Pipeline</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
+    
 </div>
 
 
 
-                    </div>
                 </div>
-            </div>
-        </main>
-
-
-        <span id="topBtn" class="hidden-xs">
-            <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'fast');return false;">
-                <i class="fas fa-arrow-up"></i>
-            </a>
-        </span><footer class="blog-footer">
+            </div><footer class="blog-footer">
     <div class="container bodycontainer">
         <div id="footer-info" class="inner">
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -505,12 +527,14 @@ pipeline<span style="color:#f92672">.</span>fit(X, y)
         砖瓦匠杜重
       </div>
     </div>
-</footer>
+</footer></div>
+
+
+        
+
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-        <script>
-            anchors.add("h2, h3");
-        </script>
+        
     </body>
 </html>
