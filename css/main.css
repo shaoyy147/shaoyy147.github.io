@@ -8,13 +8,7 @@ body{
 .bodycontainer{
     max-width: 1150px;
     padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
     background-color: white;
-}
-
-main .bodycontainer{
-    margin-top: 20px;
 }
 
 a{
@@ -22,9 +16,10 @@ a{
     text-decoration: none;
 }
 
-@media(min-width: 992px){
-    .main{
-        padding-right: 10%;
+@media(min-width: 540px){
+    .bodycontainer{
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
